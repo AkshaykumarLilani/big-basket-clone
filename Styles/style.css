@@ -1,0 +1,115 @@
+/* General style Page */
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1170px;
+  margin: auto;
+}
+
+/* Category of Egg , Meat , And Fish  */
+
+#category {
+  display: flex;
+  justify-content: center;
+}
+
+#category > div {
+  width: 1170px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#category > div img {
+  width: 170px;
+}
+
+/* About Section */
+
+#About {
+  padding-left: 3%;
+  padding-right: 2%;
+  margin-top: 3%;
+  border: 1px solid rgba(128, 128, 128, 0.26);
+  padding-bottom: 2%;
+}
+
+#About > h2 {
+  padding-top: 2%;
+  
+}
+
+#About > p ,#About > ul ,#About>div>p{
+    padding-top:5px;
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 20px;
+  }
+
+  #About > p > a {
+    color: rgb(39, 197, 39);
+    text-decoration: none;
+    font-weight: bold
+
+  }
+#About > ul,#About>div>p,#About>div>h2{
+    padding-left: 5%;
+}
+
+#About>button{
+    padding: 3px 8px;
+    margin-left: 5%;  
+}
+
+#About>button:hover{
+    cursor: pointer;
+}
+
+/* Common css*/
+
+/* Bank Offers , Top Offers , Fruits And Vegetables*/
+
+#Bank_Offer > h2,
+#Top_Offer > h2,
+#Fruits_Vegitables > h2,
+#Snacks_Store > h2,
+#Cleaning_Household > h2,
+#Daily_Staples > h2,
+#Beauty_Hygiene > h2,
+#Home_Kitchen > h2,
+#Brand_Store > h2 {
+  font: 24px;
+  text-align: center;
+  color: rgba(94, 93, 93, 0.97);
+  margin: 1%;
+  margin-top: 4%;
+  margin-bottom: 1%;
+}
+
+.cards-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 2%;
+  width: 93.5%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.cards-box a img {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.304);
+}
+
+.cards-box a img:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* @mediaQuery */
+
+/* min=>750px  max=>970 */
+

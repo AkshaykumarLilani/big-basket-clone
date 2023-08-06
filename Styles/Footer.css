@@ -1,0 +1,40 @@
+footer{
+    margin-top: 5%;
+    padding: 0 2%;
+}
+
+#Links{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bigbasket,#help,#download,#Social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#Links>div>p{
+    font-weight: bolder;
+    color: rgb(86, 221, 86);
+}
+
+#Links>div>a{
+    text-decoration: none;
+    color: rgba(19, 19, 19, 0.708);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#icon{
+    display: inline;
+}
+
+#Social-media img {
+    width: 5%;
+    display: inline-block;
+}
+
+#collaspe{
+    display: none;
+}
