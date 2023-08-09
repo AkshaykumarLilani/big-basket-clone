@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body {
+#body {
   width: 1170px;
   margin: auto;
 }
@@ -21,7 +21,7 @@ html {
 /* //Main first Image */
 
 #Main-img{
-  margin: 5rem 0;
+  margin-bottom: 5rem;
 }
 #Main-img img{
   width: 100%;
@@ -191,7 +191,7 @@ html {
 /* min=>750px  max=>970 */
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  body {
+  #body {
     width: 97rem;
   }
 
@@ -221,7 +221,7 @@ html {
 /* //media Query min-width:768 and max-width:992  */
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  body {
+  #body {
     width: 75rem;
   }
 
@@ -253,7 +253,7 @@ html {
 /* media query 572px - 778px */
 
 @media screen and (min-width: 572px) and (max-width: 768px) {
-  body {
+  #body {
     width: 54rem;
   }
 
@@ -278,7 +278,7 @@ html {
 }
 
 @media screen and (min-width: 100px) and (max-width: 572px) {
-  body {
+  #body {
     width: 52rem;
     margin: auto;
   }

@@ -12,7 +12,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #desktop-nav {
@@ -27,6 +27,9 @@ body {
   flex-direction: column;
   background-color: var(--navbar-green);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 #mobile-nav > div:first-child {
@@ -149,6 +152,7 @@ body {
   width: 27px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #sidebar-mobile > div:first-child > h2 {
