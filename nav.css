@@ -1,6 +1,12 @@
 :root {
   --navbar-green: #84c225;
   --navbar-mobile-top-height: 40px;
+  --signup-login-modal-input-height: 510px;
+  --signup-login-modal-input-width: 355px;
+}
+
+:disabled {
+  opacity: 0.5;
 }
 
 body {
@@ -204,6 +210,124 @@ body {
 
 /* ****** SIDEBAR MOBILE: END ************ */
 
+/* ****** LOGIN SIGN-UP MODAL MOBILE: START ************ */
+
+#sign-up-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 113px;
+}
+
+#sign-up-login > div:first-child {
+  width: var(--signup-login-modal-input-width);
+  min-height: var(--signup-login-modal-input-height);
+  height: auto;
+  background-color: #fff;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 0 36px 0 rgba(141, 135, 135, 0.58);
+}
+
+#sign-up-login > div:nth-child(2) {
+  width: 280px;
+  height: 440px;
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+#sign-up-login > div > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: #696969;
+  border-radius: 50%;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#sign-up-login > div:first-child > #login-signup {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  min-height: var(--signup-login-modal-input-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login-signup > h3 {
+  color: rgb(132, 194, 37);
+  font-size: 16px;
+  text-align: center;
+  line-height: 19px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+#login-signup > div {
+  width: 295px;
+}
+
+#login-signup > div > input {
+  width: 100%;
+  border: none;
+  color: #444;
+  border-bottom: 1px solid #dedede;
+  padding: 5px 5px;
+}
+
+#login-signup > div > input:focus {
+  outline: 0;
+  border-bottom: 2px solid #84c225;
+}
+
+#login-signup > div:last-child > p {
+  color: #979797;
+  font-size: 10px;
+  text-align: center;
+}
+
+#login-signup > div:last-child > p > a {
+  color: #518ef8;
+  text-decoration: none;
+}
+
+#login-signup > div:last-child > button {
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#login-signup > div:last-child > button:nth-child(1) {
+  border: 1px solid #666666;
+  color: #333;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+#login-signup > div:last-child > button:nth-child(2) {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #84c225;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+}
+
+/* ****** LOGIN SIGN-UP MODAL MOBILE: END ************ */
+
 @media (min-width: 992px) {
   #mobile-nav {
     display: none;
@@ -214,7 +338,7 @@ body {
   #sidebar-mobile {
     display: none;
   }
-  .only-mobile{
+  .only-mobile {
     display: none;
   }
 }
