@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="/Styles/payment.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="Payment-nav">
+      <img
+        class="logo-img"
+        src="https://logos-download.com/wp-content/uploads/2021/01/Bigbasket_Logo.png"
+        alt="Big-Basket Logo"
+      />
+      <h3 class="tollNumber">1860 123 1000</h3>
+    </nav>
+    <hr />
+    <div id="full-form">
+      <section id="payment">
+        <div class="heading-payment">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png"
+            alt=""
+            style="width: 2rem; height: 2rem"
+          />
+          <h3>Delivery Address</h3>
+        </div>
+        <div>
+          <div id="form">
+            <form action="">
+              <h4><span>*</span>personal Details</h4>
+              <div id="name-contact">
+                <div>
+                  <div id="name">
+                    <label for="first-name">Enter first name</label>
+                    <input type="text" id="first-name" required/>
+                  </div>
+                </div>
+
+                <div>
+                  <div id="last-name">
+                    <label for="lastname">Enter last name</label>
+                    <input type="text" id="lastname" required/>
+                  </div>
+                </div>
+
+                <div>
+                  <div id="phone">
+                    <label for="contact">Enter contact number</label>
+                    <input type="number" id="contact" required/>
+                  </div>
+                </div>
+              </div>
+              <h4><span>*</span>Address Details</h4>
+              <div id="Address-details">
+                <div id="Address">
+                  <label for="houseNumber">House No</label>
+                  <input type="number" id="houseNumber" required/>
+                </div>
+                <div>
+                  <label for="apartment">Enter apartment name</label>
+                  <input type="text" id="apartment" required/>
+                </div>
+              </div>
+
+              <div id="Street-details">
+                <div id="street-det">
+                  <label for="street">Enter street details</label>
+                  <input type="text" id="street" required/>
+                </div>
+                <div>
+                  <label for="landmark"
+                    >Enter landmark for easy reach out</label
+                  >
+                  <input type="text" id="landmark" required/>
+                </div>
+              </div>
+
+              <div id="city-details">
+                <div id="city-name">
+                  <label for="city">Enter city name</label>
+                  <select type="text" id="city">
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="mumbai">Bangalore</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="area-det">Area details</label>
+                  <select type="text" id="area-det">
+                    <option value="">Sarojni</option>
+                    <option value="">Anand Vihar</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="pincode">Pincode</label>
+                  <select type="text" id="pincode">
+                    <option value="">21345</option>
+                    <option value="248145">248145</option>
+                  </select>
+                </div>
+              </div>
+
+              <input type="submit" class="submit" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="total-payment">
+        <h4>Apply Voucher</h4>
+        <div id="Voucher">
+          <div id="coupon-voucher">
+            <input type="text" placeholder="Enter Voucher Code" id="coupon" />
+            <button id="submit-coupon" class="submit">Apply</button>
+          </div>
+        </div>
+
+        <h5>Order</h5>
+        <div>
+          <h4>TotalAmount : <span id="Amount"></span> </h4>
+          <h4>Total Items : <span id="Quantity"></span></h4>
+          <button id="Payment">Payment</button>
+        </div>
+      </section>
+    </div>
+    <!-- <h1 class="Payment-heading">Payment</h1> -->
+    <script src="/JavaScript/payment.js"></script>
+  </body>
+</html>
