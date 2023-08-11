@@ -232,6 +232,9 @@ body {
   background-color: #fff;
   position: relative;
   z-index: 4;
+}
+
+#sign-up-login > div {
   box-shadow: 0 0 36px 0 rgba(141, 135, 135, 0.58);
 }
 
@@ -328,6 +331,38 @@ body {
   color: #fff;
   font-size: 16px;
   border: none;
+}
+
+#login-signup-side {
+  padding: 15px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#login-signup-side > div > div:first-child {
+  padding: 20px 41px;
+  gap: 10px;
+}
+
+#login-signup-side .download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+h3.signup-modal-side-text {
+  font-size: 14px;
+  color: #979797;
+  margin: 0px;
+}
+p.signup-modal-side-text {
+  font-size: 12px;
+  color: #979797;
+  margin: 0px;
+  margin-bottom: 5px;
 }
 
 /* ****** LOGIN SIGN-UP MODAL MOBILE: END ************ */
