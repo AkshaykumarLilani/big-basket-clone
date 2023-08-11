@@ -186,36 +186,65 @@
     <!-- SignupLogin Modal Start -->
     <div id="sign-up-login">
         <div>
-            <div id="login-signup">
-                <h3>LOGIN/SIGNUP</h3>
+            <div id="login-signup-view-container">
+                <div id="login-signup">
+                    <h3>LOGIN/SIGNUP</h3>
 
-                <div>
-                    <input type="text" placeholder="Enter Mobile Number (10-digit)" id="mobile-number-input" onchange="validateMobileNumberInput(event)">
-                    <input type="email" placeholder="Enter Email Address" id="email-input" style="display: none;" onchange="validateEmailAddressInput(event)">
-                </div>
+                    <div>
+                        <input type="text" placeholder="Enter Mobile Number (10-digit)" id="mobile-number-input" />
+                        <input type="email" placeholder="Enter Email Address" id="email-input" style="display: none;" />
+                    </div>
 
-                <div>
-                    <button id="switch-login-method-button" class="cursor-pointer" onclick="switchEmailAndMobileInput()">
-                        Login using Email Address
-                    </button>
+                    <div>
+                        <button id="switch-login-method-button" class="cursor-pointer"
+                            onclick="switchEmailAndMobileInput()">
+                            Login using Email Address
+                        </button>
 
-                    <button class="cursor-pointer" disabled>
-                        Continue
-                    </button>
-                    <p>
-                        By continuing, I accept TCP-bigbasket’s
-                        <a href="/terms-and-conditions/" target="_blank">
-                            Terms and Conditions
-                        </a>
-                        and
-                        <a href="/privacy-policy/" target="_blank">
-                            Privacy Policy.
-                        </a>
-                    </p>
+                        <button onclick="signUp()" class="cursor-pointer" id="continue-button" disabled>
+                            Continue
+                        </button>
+                        <p>
+                            By continuing, I accept TCP-bigbasket’s
+                            <a href="/terms-and-conditions/" target="_blank">
+                                Terms and Conditions
+                            </a>
+                            and
+                            <a href="/privacy-policy/" target="_blank">
+                                Privacy Policy.
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div id="otp">
+            <div id="otp-view-container">
+                <div id="otp">
+                    <div class="px-20">
+                        <div class="w-100">
+                            <svg class="cursor-pointer" onclick="showLoginSignupView()"
+                                xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" x="101"
+                                y="30">
+                                <path fill="#4A4A4A" fill-rule="evenodd"
+                                    d="M20.266 5.115l.163.163a.392.392 0 0 1 0 .555L11.4 14.86a.196.196 0 0 0 0 .28l9.03 9.027a.392.392 0 0 1 0 .555l-.164.163a.392.392 0 0 1-.555 0l-9.595-9.62a.392.392 0 0 1 0-.554l9.596-9.595a.392.392 0 0 1 .556 0" />
+                            </svg>
+                            <h3>Verify Mobile Number</h3>
+                        </div>
+                        <p class="color-979797 text-center fs-14">Please check the OTP sent to your mobile number</p>
+                        <div class="d-flex justify-content-center align-items-center g-10">
+                            <p id="current-user-number" class="color-333 text-center">9049963060</p>
+                            <button id="change-number-button" class="btn-outline-small fs-12">change</button>
+                        </div>
 
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-30 g-10">
+                            <p class="m-0 color-979797 fs-12">Enter OTP</p>
+                            <input id="otp-input" type="text" oninput="validateOtp(event)">
+                            <button class="btn-outline-small fs-12">Resend OTP</button>
+                        </div>
+                    </div>
+                    <button onclick="logIn()" class="cursor-pointer mx-20" id="verify-continue-button" disabled>
+                        Verify & Continue
+                    </button>
+                </div>
             </div>
         </div>
         <div>
@@ -284,7 +313,7 @@
                         </div>
                     </div>
                 </div>
-                <div  style="flex:1;">
+                <div style="flex:1;">
                     <p class="text-center color-444 fs-12">Shopping at fingertips!! Download our app</p>
                     <div class="download-buttons">
                         <span>
