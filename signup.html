@@ -9,7 +9,121 @@
 
 <body>
     <!-- NavBar Section: Start -->
-    <nav id="desktop-nav"> desktop </nav>
+    <nav id="desktop-nav-not-logged-in">
+        
+    </nav>
+    <nav id="desktop-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center w-100 g-10 my-8">
+                <a href="./index.html" class="d-flex align-items-center">
+                    <img width="92px" src="./Images/Navbar/Desktop/bigbasket_logo.png" alt="">
+                </a>
+                <div class="d-flex justify-content-start align-items-center navbar-search flex-1">
+                    <input type="text" placeholder="Search for Products" name="" id=""
+                        class="outline-transparent border-0 w-100">
+                </div>
+                <div>
+                    <button class="delivery-button d-flex flex-column w-100 p-5" type="button">
+                        <span>
+                            <svg width="15" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="m13.733 3.434.817 1.049s.093.113.122.2c.042.124 0 .335 0 .335l-.252 2.536c0 .229-.372.608-.601.608h-1.215C12.414 9.207 11.516 10 10.441 10c-1.077 0-1.975-.795-2.164-1.842H6.769C6.579 9.205 5.68 10 4.605 10 3.528 10 2.63 9.205 2.44 8.158H1.252c-.277 0-.566-.289-.566-.645 0-.357.289-.646.566-.646H2.58a2.204 2.204 0 0 1 2.026-1.373c.909 0 1.69.566 2.026 1.373h1.784a2.204 2.204 0 0 1 2.026-1.373c.914 0 1.7.573 2.032 1.388l.573-.015.119-1.85-.462-.553H8.926c-.23 0-.504-.316-.504-.65l.848-2.44H2.34c-.23 0-.624-.344-.624-.687 0-.344.394-.687.623-.687H10.3c.344 0 .687 0 .686.343l-.098.344h1.018c.157 0 .42.287.49.441l1.338 2.306Zm-1.428-.113-.631-1.26h-1.181l-.363 1.26h2.175ZM4.697 2.007H1.832c-.457 0-.827.29-.827.646 0 .356.37.645.827.645h2.865c.456 0 .826-.289.826-.645 0-.357-.37-.646-.826-.646ZM3.692 4.014H.827c-.457 0-.827.29-.827.646 0 .356.37.645.827.645h2.865c.456 0 .826-.289.826-.645 0-.357-.37-.646-.826-.646Zm-.03 3.733c0-.533.423-.966.943-.966s.943.433.943.966a.956.956 0 0 1-.943.965.956.956 0 0 1-.944-.965Zm5.836 0c0-.533.423-.966.943-.966s.943.433.943.966a.956.956 0 0 1-.943.965.956.956 0 0 1-.943-.965Z"
+                                    fill="#606060">
+                                </path>
+                            </svg>
+                            <span>Get it in 11hrs</span>
+                        </span>
+                        <span>
+                            <span class="font-bold">Home:&nbsp;</span>
+                            <span>Ulhasnagar-4, Mumbai</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex g-10">
+                    <div>
+                        <button type="button"
+                            class="d-flex justify-content-center align-items-center border-0 p-5 br-4 wh-36">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="12" fill="#202020"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.635 8.857a2.86 2.86 0 0 1-2.857 2.857 2.86 2.86 0 0 1-2.857-2.857A2.86 2.86 0 0 1 11.778 6a2.86 2.86 0 0 1 2.857 2.857Zm2.147 9.287c0 .394-.32.714-.714.714H7.497a.714.714 0 0 1-.715-.714c0-2.758 2.244-5 5-5 2.757 0 5 2.242 5 5Z"
+                                    fill="#fff"></path>
+                                <mask id="AvatarIcon_svg__a" maskUnits="userSpaceOnUse" x="6" y="6" width="11"
+                                    height="13" style="mask-type: alpha;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.635 8.857a2.86 2.86 0 0 1-2.857 2.857 2.86 2.86 0 0 1-2.857-2.857A2.86 2.86 0 0 1 11.778 6a2.86 2.86 0 0 1 2.857 2.857Zm2.147 9.287c0 .394-.32.714-.714.714H7.497a.714.714 0 0 1-.715-.714c0-2.758 2.244-5 5-5 2.757 0 5 2.242 5 5Z"
+                                        fill="#fff"></path>
+                                </mask>
+                                <g mask="url(#AvatarIcon_svg__a)">
+                                    <path fill="#fff" d="M0 0h24v24H0z"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="cart.html"
+                        class="d-flex justify-content-center align-items-center bg-light-red br-4 wh-36 position-relative">
+                        <div>
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="12" fill="#D63333"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.795 10.2H18.3c.385 0 .7.315.7.7 0 .385-.315.7-.7.7H5.7a.702.702 0 0 1-.7-.7c0-.385.315-.7.7-.7h1.505l.998-3.01A1.75 1.75 0 0 1 9.864 6h4.27c.752 0 1.435.473 1.662 1.19l.998 3.01ZM8.867 7.418 7.94 10.2h8.12l-.91-2.782a1.035 1.035 0 0 0-.998-.718H9.866c-.455 0-.857.28-.998.718ZM6.05 16.85V12.3h11.9v4.55c0 .962-.787 1.75-1.75 1.75H7.8c-.962 0-1.75-.788-1.75-1.75Zm3.465.367c.157 0 .297-.14.297-.314v-2.888c0-.175-.122-.315-.297-.315a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888A.314.314 0 0 0 12 13.7a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888a.314.314 0 0 0-.315-.315c-.157 0-.297.14-.297.315v2.887c0 .175.122.316.297.316Z"
+                                    fill="#fff"></path>
+                                <mask id="basket_svg__a" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="13"
+                                    style="mask-type: alpha;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.795 10.2H18.3c.385 0 .7.315.7.7 0 .385-.315.7-.7.7H5.7a.702.702 0 0 1-.7-.7c0-.385.315-.7.7-.7h1.505l.998-3.01A1.75 1.75 0 0 1 9.864 6h4.27c.752 0 1.435.473 1.662 1.19l.998 3.01ZM8.867 7.418 7.94 10.2h8.12l-.91-2.782a1.035 1.035 0 0 0-.998-.718H9.866c-.455 0-.857.28-.998.718ZM6.05 16.85V12.3h11.9v4.55c0 .962-.787 1.75-1.75 1.75H7.8c-.962 0-1.75-.788-1.75-1.75Zm3.465.367c.157 0 .297-.14.297-.314v-2.888c0-.175-.122-.315-.297-.315a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888A.314.314 0 0 0 12 13.7a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888a.314.314 0 0 0-.315-.315c-.157 0-.297.14-.297.315v2.887c0 .175.122.316.297.316Z"
+                                        fill="#606060"></path>
+                                </mask>
+                                <g mask="url(#basket_svg__a)">
+                                    <path fill="#fff" d="M0 0h24v24H0z"></path>
+                                </g>
+                            </svg>
+                            <span
+                                class="position-absolute right-0 bottom-0 border-white bg-black color-white fs-12 p-2">5</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center g-10 my-8">
+                <div class="d-flex justify-content-between align-items-center br-4 g-10 p-5 bg-apple-green color-white">
+                    <div class="d-flex flex-column">
+                        <span class="fs-10">Shop by</span>
+                        <span class="fs-14">Category</span>
+                    </div>
+                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8 11.333c-.338 0-.66-.155-.884-.428l-2.81-3.398a1.39 1.39 0 0 1-.172-1.474c.204-.432.608-.7 1.057-.7h5.617c.449 0 .854.268 1.057.7a1.39 1.39 0 0 1-.172 1.473l-2.81 3.4a1.146 1.146 0 0 1-.883.427Z"
+                            fill="#fff"></path>
+                    </svg>
+                </div>
+                <div class="d-flex justify-content-around align-items-center flex-1">
+                    <div class="navbar-dropdowns mw-8">
+                        <span class="fs-14">Exotic Fruits & Veggies</span>
+                    </div>
+                    <div class="navbar-dropdowns mw-8">
+                        <span class="fs-14">Tea</span>
+                    </div>
+                    <div class="navbar-dropdowns mw-8">
+                        <span class="fs-14">Ghee</span>
+                    </div>
+                    <div class="navbar-dropdowns mw-8">
+                        <span class="fs-14">Nandini</span>
+                    </div>
+                    <div>
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="false"
+                            class="cursor-pointer">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="m9.3 3.582 3.22 4c.199.247.196.6-.008.845l-3.333 4a.666.666 0 1 1-1.024-.854l2.984-3.58-2.877-3.575A.666.666 0 1 1 9.3 3.582ZM3.698 3.48a.667.667 0 0 1 .937.101l3.219 4c.198.247.196.6-.008.845l-3.333 4a.666.666 0 1 1-1.024-.854l2.983-3.58-2.876-3.575a.667.667 0 0 1 .102-.937Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <a href="">
+                    <img src="./Images/Navbar/Desktop/offers.png" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <nav id="mobile-nav">
         <div>

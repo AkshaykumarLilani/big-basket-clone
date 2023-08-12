@@ -458,17 +458,57 @@ p.signup-modal-side-text {
 
 /* ****** LOGIN SIGN-UP MODAL MOBILE: END ************ */
 
+.delivery-button {
+  color: rgba(96, 96, 96, 1);
+  background-color: rgba(238, 238, 238, 1);
+  border-radius: 4px;
+  border: 0px;
+}
+
+.navbar-search {
+  border: 1px solid rgba(213, 213, 213, 0.5);
+  border-radius: 4px;
+  padding: 10px 10px 10px 20px;
+}
+
+.navbar-dropdowns {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @media (min-width: 992px) {
   #mobile-nav {
     display: none;
   }
   #desktop-nav {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+    min-width: 100vw;
   }
   #sidebar-mobile {
     display: none;
   }
   .only-mobile {
     display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 768px;
+    padding-right: 2.75rem;
+    padding-left: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding-right: 2.75rem;
+    padding-left: 2.75rem;
   }
 }
