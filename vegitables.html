@@ -3,314 +3,853 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vegitables</title>
-    <link rel="stylesheet" href="/Styles/vegetables.css" />
-    <link rel="stylesheet" href="/Styles/Footer.css" />
-    <link rel="stylesheet" href="/Styles/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+    <title>Vegitables</title>
+
+    <link rel="stylesheet" href="/Styles/vegetables.css" />
+    <link rel="stylesheet" href="/Styles/Footer.css" />
+    <link rel="stylesheet" href="/Styles/style.css" />
+    <link rel="stylesheet" href="Styles/nav.css" />
+    <link rel="stylesheet" href="Styles/utilities.css" />
   </head>
   <body>
-    <div id="Main-box">
-      <div id="temp">
-        <div id="stick">
-          <h4>
-            <span class="Categories">Categories</span>
-            <hr />
-          </h4>
-          <h4>
-            <span class="Categories">Brand</span>
-            <hr />
-          </h4>
-          <form action="">
-            <input type="text" id="search-bar" placeholder="Search by Brand" />
-            <button id="Search-icon" type="submit">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png"
-                alt=""
+    <!-- Navbar Code Start --------------------------------------------------- -->
+    <!-- NavBar Section: Start -->
+    <nav id="desktop-nav-not-logged-in">
+      <div class="container">
+        <div class="fully-centered">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15 15"
+            width="15"
+            height="15"
+            x="156"
+            y="120"
+          >
+            <defs>
+              <style>
+                .ahcls-1 {
+                  fill: #666;
+                }
+              </style>
+            </defs>
+            <title>Asset 1</title>
+            <path
+              class="ahcls-1"
+              d="M11.72 15a6.54 6.54 0 0 1-2.24-.47 15.87 15.87 0 0 1-5.35-3.65A15.92 15.92 0 0 1 .47 5.52c-.67-1.77-.62-3.21.12-4l.2-.2A3.46 3.46 0 0 1 3.16 0a2.78 2.78 0 0 1 2 1.24c1.76 2.19 1 3.21 0 4.24l-.05.05c0 .19.31.86 1.9 2.45a12.72 12.72 0 0 0 1.9 1.61 2.18 2.18 0 0 0 .57.28l.06-.06c1-1 2-1.75 4.23 0a2.77 2.77 0 0 1 1.23 2 3.15 3.15 0 0 1-1.32 2.33l-.26.25a2.35 2.35 0 0 1-1.7.61zM3.09 1.11c-.52 0-1 .49-1.45 1l-.27.28c-.37.3-.37 1.28.14 2.74a14.8 14.8 0 0 0 3.41 5 14.74 14.74 0 0 0 5 3.4c1.25.48 2.39.52 2.77.13l.25-.24c.51-.48 1-1 1-1.5a1.78 1.78 0 0 0-.82-1.2c-1.58-1.27-2-.87-2.75-.09l-.15.15c-.4.4-1 .32-1.87-.23a13.65 13.65 0 0 1-2.11-1.79C5 7.49 3.39 5.7 4.25 4.83l.15-.15c.79-.78 1.19-1.17-.08-2.75a1.79 1.79 0 0 0-1.19-.82z"
+              id="ahLayer_14"
+            />
+          </svg>
+          <span class="fs-13"> 1860 123 1000 </span>
+        </div>
+        <div class="fully-centered">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 11.34087 15"
+            width="11.341"
+            height="15"
+            x="303"
+            y="233"
+          >
+            <defs>
+              <style>
+                .ancls-1 {
+                  fill: #666;
+                }
+              </style>
+            </defs>
+            <title>Asset 5</title>
+            <path
+              class="ancls-1"
+              d="M5.67 15a.754.754 0 0 1-.587-.277C4.565 14.105 0 8.57 0 5.67a5.67 5.67 0 0 1 11.34 0c0 2.902-4.562 8.437-5.082 9.058A.78.78 0 0 1 5.67 15zm.265-.99l.003.004zM5.67 1.112A4.563 4.563 0 0 0 1.112 5.67c0 1.937 2.843 5.92 4.56 8.024C7.38 11.6 10.23 7.612 10.23 5.67a4.563 4.563 0 0 0-4.56-4.558zm0 7.49A2.932 2.932 0 1 1 8.603 5.67 2.937 2.937 0 0 1 5.67 8.603zm0-4.752a1.82 1.82 0 1 0 1.82 1.82 1.82 1.82 0 0 0-1.82-1.82z"
+              id="anLayer_15"
+            />
+          </svg>
+          <span class="hover-green cursor-pointer fs-13">
+            421004, Ulhasnagar
+          </span>
+          <img
+            style="width: 10px"
+            src="./Images/Navbar/Desktop/caret.svg"
+            alt=""
+          />
+        </div>
+        <div class="fully-centered">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 17.3596 15.17106"
+            width="17.36"
+            height="15.171"
+            x="554"
+            y="465"
+          >
+            <defs>
+              <style>
+                .bacls-1 {
+                  fill: #666;
+                }
+              </style>
+            </defs>
+            <title>Artboard 118</title>
+            <g id="baLayer_14">
+              <path
+                class="bacls-1"
+                d="M8.698 8.802h-.04A3.077 3.077 0 0 1 6.294 7.8c-1.36-1.53-1.062-4.284-1.06-4.31A3.28 3.28 0 0 1 8.6 0a3.324 3.324 0 0 1 3.522 3.495c.018.15.29 2.782-1.06 4.3a3.067 3.067 0 0 1-2.36 1.007zm.058-7.474c-.882 0-2.11.292-2.2 2.25a5.025 5.025 0 0 0 .728 3.34 1.754 1.754 0 0 0 1.385.556l.023.664-.01-.664a1.747 1.747 0 0 0 1.387-.557 4.84 4.84 0 0 0 .745-3.157l-.015-.027-.003-.185c-.088-1.93-1.317-2.22-2.04-2.22zM.73 15.02c-.34 0-.63.342-.66-.003-.39-4.3.898-4.67 2.906-5.2a4.834 4.834 0 0 0 3.242-1.83.654.654 0 0 1 .93-.055.71.71 0 0 1 .13.967 6.507 6.507 0 0 1-3.963 2.482c-1.492.394-2.242.003-1.924 3.507.033.363-.236.13-.6.13zm15.9 0h-.06c-.365 0-.633.243-.6-.122.316-3.504-.433-3.403-1.925-3.796a6.133 6.133 0 0 1-3.964-2.315.58.58 0 0 1 .13-.855.67.67 0 0 1 .93.167 5.153 5.153 0 0 0 3.244 2c2.008.53 3.295.608 2.906 4.907-.03.345-.32.014-.66.014z"
               />
+            </g>
+          </svg>
+          <span
+            onclick="openLoginModal(event)"
+            class="hover-green cursor-pointer fs-13"
+          >
+            Login/Signup
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="desktop-nav">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center w-100 g-10 my-8"
+        >
+          <a href="./index.html" class="d-flex align-items-center">
+            <img
+              width="92px"
+              src="./Images/Navbar/Desktop/bigbasket_logo.png"
+              alt=""
+            />
+          </a>
+          <div
+            class="d-flex justify-content-start align-items-center navbar-search flex-1"
+          >
+            <input
+              type="text"
+              placeholder="Search for Products"
+              name=""
+              id=""
+              class="outline-transparent border-0 w-100"
+            />
+          </div>
+          <div>
+            <button
+              class="delivery-button d-flex flex-column w-100 p-5"
+              type="button"
+            >
+              <span>
+                <svg
+                  width="15"
+                  height="10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="m13.733 3.434.817 1.049s.093.113.122.2c.042.124 0 .335 0 .335l-.252 2.536c0 .229-.372.608-.601.608h-1.215C12.414 9.207 11.516 10 10.441 10c-1.077 0-1.975-.795-2.164-1.842H6.769C6.579 9.205 5.68 10 4.605 10 3.528 10 2.63 9.205 2.44 8.158H1.252c-.277 0-.566-.289-.566-.645 0-.357.289-.646.566-.646H2.58a2.204 2.204 0 0 1 2.026-1.373c.909 0 1.69.566 2.026 1.373h1.784a2.204 2.204 0 0 1 2.026-1.373c.914 0 1.7.573 2.032 1.388l.573-.015.119-1.85-.462-.553H8.926c-.23 0-.504-.316-.504-.65l.848-2.44H2.34c-.23 0-.624-.344-.624-.687 0-.344.394-.687.623-.687H10.3c.344 0 .687 0 .686.343l-.098.344h1.018c.157 0 .42.287.49.441l1.338 2.306Zm-1.428-.113-.631-1.26h-1.181l-.363 1.26h2.175ZM4.697 2.007H1.832c-.457 0-.827.29-.827.646 0 .356.37.645.827.645h2.865c.456 0 .826-.289.826-.645 0-.357-.37-.646-.826-.646ZM3.692 4.014H.827c-.457 0-.827.29-.827.646 0 .356.37.645.827.645h2.865c.456 0 .826-.289.826-.645 0-.357-.37-.646-.826-.646Zm-.03 3.733c0-.533.423-.966.943-.966s.943.433.943.966a.956.956 0 0 1-.943.965.956.956 0 0 1-.944-.965Zm5.836 0c0-.533.423-.966.943-.966s.943.433.943.966a.956.956 0 0 1-.943.965.956.956 0 0 1-.943-.965Z"
+                    fill="#606060"
+                  ></path>
+                </svg>
+                <span>Get it in 11hrs</span>
+              </span>
+              <span>
+                <span class="font-bold">Home:&nbsp;</span>
+                <span>Ulhasnagar-4, Mumbai</span>
+              </span>
             </button>
-          </form>
-          <!-- -----------------------------Price checkbox part---------------------------------- -->
-          <h4>
-            <span class="Categories">Price</span>
-            <hr />
-          </h4>
-          <div class="check-box-container">
+          </div>
+          <div class="d-flex g-10">
             <div>
-              <input
-                type="checkbox"
-                id="price1"
-                name="price1"
-                value="less-20"
-              />
-              <label for="price1" class="checkPrice"> Less than Rs 20</label
-              ><br />
+              <button
+                type="button"
+                class="d-flex justify-content-center align-items-center border-0 p-5 br-4 wh-36"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="24" height="24" rx="12" fill="#202020"></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.635 8.857a2.86 2.86 0 0 1-2.857 2.857 2.86 2.86 0 0 1-2.857-2.857A2.86 2.86 0 0 1 11.778 6a2.86 2.86 0 0 1 2.857 2.857Zm2.147 9.287c0 .394-.32.714-.714.714H7.497a.714.714 0 0 1-.715-.714c0-2.758 2.244-5 5-5 2.757 0 5 2.242 5 5Z"
+                    fill="#fff"
+                  ></path>
+                  <mask
+                    id="AvatarIcon_svg__a"
+                    maskUnits="userSpaceOnUse"
+                    x="6"
+                    y="6"
+                    width="11"
+                    height="13"
+                    style="mask-type: alpha"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.635 8.857a2.86 2.86 0 0 1-2.857 2.857 2.86 2.86 0 0 1-2.857-2.857A2.86 2.86 0 0 1 11.778 6a2.86 2.86 0 0 1 2.857 2.857Zm2.147 9.287c0 .394-.32.714-.714.714H7.497a.714.714 0 0 1-.715-.714c0-2.758 2.244-5 5-5 2.757 0 5 2.242 5 5Z"
+                      fill="#fff"
+                    ></path>
+                  </mask>
+                  <g mask="url(#AvatarIcon_svg__a)">
+                    <path fill="#fff" d="M0 0h24v24H0z"></path>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <a
+              href="cart.html"
+              class="d-flex justify-content-center align-items-center bg-light-red br-4 wh-36 position-relative"
+            >
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="24" height="24" rx="12" fill="#D63333"></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.795 10.2H18.3c.385 0 .7.315.7.7 0 .385-.315.7-.7.7H5.7a.702.702 0 0 1-.7-.7c0-.385.315-.7.7-.7h1.505l.998-3.01A1.75 1.75 0 0 1 9.864 6h4.27c.752 0 1.435.473 1.662 1.19l.998 3.01ZM8.867 7.418 7.94 10.2h8.12l-.91-2.782a1.035 1.035 0 0 0-.998-.718H9.866c-.455 0-.857.28-.998.718ZM6.05 16.85V12.3h11.9v4.55c0 .962-.787 1.75-1.75 1.75H7.8c-.962 0-1.75-.788-1.75-1.75Zm3.465.367c.157 0 .297-.14.297-.314v-2.888c0-.175-.122-.315-.297-.315a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888A.314.314 0 0 0 12 13.7a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888a.314.314 0 0 0-.315-.315c-.157 0-.297.14-.297.315v2.887c0 .175.122.316.297.316Z"
+                    fill="#fff"
+                  ></path>
+                  <mask
+                    id="basket_svg__a"
+                    maskUnits="userSpaceOnUse"
+                    x="5"
+                    y="6"
+                    width="14"
+                    height="13"
+                    style="mask-type: alpha"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.795 10.2H18.3c.385 0 .7.315.7.7 0 .385-.315.7-.7.7H5.7a.702.702 0 0 1-.7-.7c0-.385.315-.7.7-.7h1.505l.998-3.01A1.75 1.75 0 0 1 9.864 6h4.27c.752 0 1.435.473 1.662 1.19l.998 3.01ZM8.867 7.418 7.94 10.2h8.12l-.91-2.782a1.035 1.035 0 0 0-.998-.718H9.866c-.455 0-.857.28-.998.718ZM6.05 16.85V12.3h11.9v4.55c0 .962-.787 1.75-1.75 1.75H7.8c-.962 0-1.75-.788-1.75-1.75Zm3.465.367c.157 0 .297-.14.297-.314v-2.888c0-.175-.122-.315-.297-.315a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888A.314.314 0 0 0 12 13.7a.314.314 0 0 0-.315.315v2.887c0 .175.14.316.315.316Zm2.485 0c.175 0 .315-.14.315-.314v-2.888a.314.314 0 0 0-.315-.315c-.157 0-.297.14-.297.315v2.887c0 .175.122.316.297.316Z"
+                      fill="#606060"
+                    ></path>
+                  </mask>
+                  <g mask="url(#basket_svg__a)">
+                    <path fill="#fff" d="M0 0h24v24H0z"></path>
+                  </g>
+                </svg>
+                <span
+                  class="position-absolute right-0 bottom-0 border-white bg-black color-white fs-12 p-2"
+                  >5</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center g-10 my-8"
+        >
+          <div
+            class="d-flex justify-content-between align-items-center br-4 g-10 p-5 bg-apple-green color-white"
+          >
+            <div class="d-flex flex-column">
+              <span class="fs-10">Shop by</span>
+              <span class="fs-14">Category</span>
+            </div>
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 11.333c-.338 0-.66-.155-.884-.428l-2.81-3.398a1.39 1.39 0 0 1-.172-1.474c.204-.432.608-.7 1.057-.7h5.617c.449 0 .854.268 1.057.7a1.39 1.39 0 0 1-.172 1.473l-2.81 3.4a1.146 1.146 0 0 1-.883.427Z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </div>
+          <div class="d-flex justify-content-around align-items-center flex-1">
+            <div class="navbar-dropdowns mw-8">
+              <span class="fs-14">Exotic Fruits & Veggies</span>
+            </div>
+            <div class="navbar-dropdowns mw-8">
+              <span class="fs-14">Tea</span>
+            </div>
+            <div class="navbar-dropdowns mw-8">
+              <span class="fs-14">Ghee</span>
+            </div>
+            <div class="navbar-dropdowns mw-8">
+              <span class="fs-14">Nandini</span>
             </div>
             <div>
-              <input
-                type="checkbox"
-                id="price2"
-                name="price2"
-                value="price-20-50"
-              />
-              <label for="price1" class="checkPrice"> Rs 21 to Rs 50</label
-              ><br />
-            </div>
-
-            <div>
-              <input
-                type="checkbox"
-                id="price3"
-                name="price3"
-                value="price-51-100"
-              />
-              <label for="price1" class="checkPrice"> Rs 51 to Rs100</label
-              ><br />
-            </div>
-
-            <div>
-              <input
-                type="checkbox"
-                id="price4"
-                name="price4"
-                value="price-101-200"
-              />
-              <label for="price1" class="checkPrice"> Rs 101 to Rs 200</label
-              ><br />
-            </div>
-
-            <div>
-              <input
-                type="checkbox"
-                id="price5"
-                name="price5"
-                value="price-201-500"
-              />
-              <label for="price1" class="checkPrice"> Rs 201 to Rs 500</label
-              ><br />
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="price6"
-                name="price6"
-                value="more-501"
-              />
-              <label for="price1" class="checkPrice"> More than Rs 501</label
-              ><br />
+              <svg
+                width="16"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="false"
+                class="cursor-pointer"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="m9.3 3.582 3.22 4c.199.247.196.6-.008.845l-3.333 4a.666.666 0 1 1-1.024-.854l2.984-3.58-2.877-3.575A.666.666 0 1 1 9.3 3.582ZM3.698 3.48a.667.667 0 0 1 .937.101l3.219 4c.198.247.196.6-.008.845l-3.333 4a.666.666 0 1 1-1.024-.854l2.983-3.58-2.876-3.575a.667.667 0 0 1 .102-.937Z"
+                ></path>
+              </svg>
             </div>
           </div>
-          <!-- --------------------------Discount Part------------------------------ -->
-          <h4>
-            <span class="Categories">Discount</span>
-            <hr />
-          </h4>
-          <div class="check-box-container">
-            <div>
-              <input
-                type="checkbox"
-                id="discount1"
-                name="discount1"
-                value="Discount"
+          <a href="">
+            <img src="./Images/Navbar/Desktop/offers.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="mobile-nav">
+      <div>
+        <a href="" onclick="openSidebar(event)">
+          <svg
+            viewBox="0 0 26.35944 22"
+            width="26.359"
+            height="22"
+            x="365"
+            y="313"
+          >
+            <defs>
+              <style>
+                .arcls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finalpp</title>
+            <path
+              class="arcls-1"
+              d="M1.204 0h23.95a1.204 1.204 0 0 1 1.205 1.204 1.204 1.204 0 0 1-1.205 1.205H1.205A1.204 1.204 0 0 1 0 1.203 1.204 1.204 0 0 1 1.204 0zm0 9.796h23.95A1.204 1.204 0 0 1 26.36 11a1.204 1.204 0 0 1-1.205 1.204H1.205A1.204 1.204 0 0 1 0 11a1.204 1.204 0 0 1 1.204-1.204zm0 9.795h23.95a1.204 1.204 0 0 1 1.205 1.206A1.204 1.204 0 0 1 25.154 22H1.205A1.204 1.204 0 0 1 0 20.796a1.204 1.204 0 0 1 1.204-1.205z"
+              id="arLayer_25"
+            ></path>
+          </svg>
+        </a>
+        <a href="./signup.html">
+          <svg
+            viewBox="0 0 25.7893 23.10056"
+            width="25.789"
+            height="23.101"
+            x="699"
+            y="597"
+          >
+            <defs>
+              <style>
+                .bhcls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finalpp</title>
+            <g id="bhLayer_14">
+              <path
+                class="bhcls-1"
+                d="M12.922 13.076h-.058a4.57 4.57 0 0 1-3.515-1.49c-2.022-2.27-1.58-6.362-1.575-6.403C7.95 1.373 10.47 0 12.772 0c2.53 0 5.048 1.367 5.236 5.192.026.224.43 4.133-1.574 6.39a4.557 4.557 0 0 1-3.505 1.494zm.086-11.103c-1.31 0-3.135.433-3.267 3.344-.102 1.008-.088 3.645 1.08 4.96a2.606 2.606 0 0 0 2.058.826l.036.986-.014-.987a2.595 2.595 0 0 0 2.06-.828c1.11-1.25 1.18-3.666 1.106-4.69l-.022-.04-.004-.274c-.13-2.864-1.956-3.297-3.032-3.297zM1.084 23.09c-.505 0-.936.118-.98-.395-.58-6.387 1.334-7.13 4.317-7.915 1.596-.42 3.24-.73 4.818-2.82a.974.974 0 0 1 1.38-.13 1.026 1.026 0 0 1 .193 1.414 9.638 9.638 0 0 1-5.886 3.677c-2.216.586-3.33.386-2.858 5.59.048.543-.35.58-.893.58zm23.62 0h-.088c-.54 0-.94-.03-.893-.57.472-5.207-.642-5.25-2.858-5.834a9.32 9.32 0 0 1-5.89-3.536.914.914 0 0 1 .193-1.318.99.99 0 0 1 1.38.224 7.63 7.63 0 0 0 4.82 2.96c2.983.787 4.896 1.284 4.32 7.672-.047.512-.478.4-.983.4z"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            viewBox="0 0 25.07045 25"
+            width="25.07"
+            height="25"
+            x="88"
+            y="65"
+          >
+            <defs>
+              <style>
+                .aecls-1 {
+                  fill: #a5cd39;
+                }
+
+                .aecls-1,
+                .aecls-2,
+                .aecls-3 {
+                  fill-rule: evenodd;
+                }
+
+                .aecls-2 {
+                  fill: #231f20;
+                }
+
+                .aecls-3 {
+                  fill: #ec1c24;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finalq</title>
+            <g id="ae_Group_">
+              <path
+                id="ae_Path_"
+                class="aecls-1"
+                d="M3.747 0H21.29a3.774 3.774 0 0 1 3.78 3.71v17.544A3.78 3.78 0 0 1 21.29 25H3.747A3.75 3.75 0 0 1 0 21.254V3.71A3.743 3.743 0 0 1 3.747 0z"
+              ></path>
+              <g id="ae_Group_2">
+                <path
+                  id="ae_Path_2"
+                  class="aecls-2"
+                  d="M13.11 3.134h-1.996v5.39a3.626 3.626 0 0 1 1.996.61z"
+                ></path>
+                <path
+                  id="ae_Compound_Path_"
+                  class="aecls-3"
+                  d="M11.64 18.26a2.173 2.173 0 0 1-2.032 1.12 2.542 2.542 0 0 1-1.61-.525 3.375 3.375 0 0 1-1.016-1.47 5.66 5.66 0 0 1-.35-1.89 5.866 5.866 0 0 1 .35-1.927 3.08 3.08 0 0 1 1.016-1.436 2.38 2.38 0 0 1 1.61-.56 2.348 2.348 0 0 1 1.54.525 3.494 3.494 0 0 1 .91 1.436 6.796 6.796 0 0 1 .28 1.96 5.143 5.143 0 0 1-.7 2.767zm3.536-5.883a5.505 5.505 0 0 0-1.75-2.38 4.38 4.38 0 0 0-2.767-.91 5.03 5.03 0 0 0-2.172.454 3.838 3.838 0 0 0-1.61 1.367h-.036V3.134h-3.29V21.83s3.01.35 3.115-1.575v-.316l.035.14a4.237 4.237 0 0 0 .35.56 3.677 3.677 0 0 0 1.226.84 5.847 5.847 0 0 0 2.38.385 4.356 4.356 0 0 0 2.767-.875 5.72 5.72 0 0 0 1.75-2.38 8.788 8.788 0 0 0 .596-3.117 8.644 8.644 0 0 0-.594-3.117z"
+                ></path>
+                <path
+                  id="ae_Path_3"
+                  class="aecls-2"
+                  d="M20.924 12.377a4.93 4.93 0 0 0-6.688-2.836q-.178.086-.346.184a6.655 6.655 0 0 1 1.062 1.218 3.183 3.183 0 0 1 1.066-.17c2.537 0 3.29 2.678 3.29 4.725 0 2.07-.804 4.684-3.29 4.684a3.29 3.29 0 0 1-1.15-.193 6.536 6.536 0 0 1-1.22 1.3c.116.065.24.13.378.194a5.846 5.846 0 0 0 2.38.386 4.356 4.356 0 0 0 2.767-.875 5.72 5.72 0 0 0 1.75-2.38 8.788 8.788 0 0 0 .596-3.116 8.644 8.644 0 0 0-.596-3.117z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            viewBox="0 0 18.89919 25"
+            width="18.899"
+            height="25"
+            x="327"
+            y="263"
+          >
+            <defs>
+              <style>
+                .apcls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finalq</title>
+            <path
+              class="apcls-1"
+              d="M9.45 25a1.276 1.276 0 0 1-.97-.448C7.605 23.51 0 14.282 0 9.448a9.45 9.45 0 0 1 18.9 0c0 4.84-7.603 14.062-8.47 15.098a1.3 1.3 0 0 1-.98.454zm0-23.146a7.605 7.605 0 0 0-7.596 7.594c0 3.23 4.737 9.867 7.6 13.373 2.843-3.485 7.592-10.132 7.592-13.372A7.603 7.603 0 0 0 9.45 1.854zm0 12.484a4.887 4.887 0 1 1 4.885-4.89 4.895 4.895 0 0 1-4.884 4.89zm0-7.92a3.033 3.033 0 1 0 3.032 3.03 3.035 3.035 0 0 0-3.03-3.03z"
+              id="apLayer_15"
+            ></path>
+          </svg>
+        </a>
+        <a href="/cart.html">
+          <svg
+            viewBox="0 0 27.54524 25"
+            width="27.545"
+            height="25"
+            x="60"
+            y="40"
+          >
+            <defs>
+              <style>
+                .adcls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finalq</title>
+            <path
+              class="adcls-1"
+              d="M1.02 2.038h2.92L8.1 17.086a1.02 1.02 0 0 0 .986.747h12.79a1.02 1.02 0 0 0 .933-.612l4.653-10.7a1.03 1.03 0 0 0-.085-.966 1.012 1.012 0 0 0-.85-.46h-14.13a1.02 1.02 0 0 0 0 2.04h12.568l-3.77 8.66H9.85L5.69.748A1.02 1.02 0 0 0 4.705 0H1.02a1.02 1.02 0 1 0 0 2.038zM8.118 25a2.31 2.31 0 1 0-2.31-2.31A2.312 2.312 0 0 0 8.118 25zm14.436 0h.17a2.39 2.39 0 1 0-.17 0z"
+              id="adLayer_3"
+            ></path>
+          </svg>
+          <span id="cart-value">0</span>
+        </a>
+      </div>
+      <div>
+        <div class="search-bar-mobile">
+          <input
+            type="search"
+            name=""
+            placeholder="Search for Products..."
+            id=""
+          />
+          <svg viewBox="0 0 20 20" width="20" height="20" x="460" y="395">
+            <defs>
+              <style>
+                .awcls-1 {
+                  fill: #000;
+                }
+              </style>
+            </defs>
+            <title>Icons - All.outline.4-Finall</title>
+            <path
+              class="awcls-1"
+              d="M19.755 18.58l-4.808-4.808a8.423 8.423 0 1 0-1.18 1.18l4.808 4.803a.833.833 0 1 0 1.18-1.175zM8.43 15.18a6.753 6.753 0 1 1 6.754-6.752A6.76 6.76 0 0 1 8.43 15.18zm0 0"
+              id="awLayer_18"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <section id="sidebar-mobile">
+      <div>
+        <h2>HOME</h2>
+        <button onclick="closeSidebar(event)">
+          <svg viewBox="0 0 15.00009 15" width="15" height="15" x="171" y="135">
+            <defs>
+              <style>
+                .aicls-1 {
+                  fill: #84c225;
+                }
+              </style>
+            </defs>
+            <title>Artboard 122</title>
+            <path
+              class="aicls-1"
+              d="M9.21 7.5l5.436-5.434a1.21 1.21 0 0 0-1.71-1.712L7.5 5.79 2.065.354a1.21 1.21 0 0 0-1.71 1.712L5.788 7.5.354 12.934a1.21 1.21 0 0 0 1.71 1.712L7.5 9.21l5.435 5.435a1.21 1.21 0 0 0 1.71-1.712z"
+              id="aiLayer_24"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <h3>Shop by Category</h3>
+        <div id="sidebar-menu">
+          <div>
+            OFFERS
+            <span onclick="showPlusMinus(event)">
+              <img
+                src="./Images/Navbar/Mobile/plus_icon.svg"
+                alt=""
+                class="plus_icon"
               />
-              <label for="discount1" class="checkPrice"> 15% - 25%</label><br />
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="discount2"
-                name="discount2"
-                value="Discount"
+            </span>
+          </div>
+        </div>
+        <div id="sidebar-menu">
+          <div>
+            MORE SHOPS
+            <span onclick="showPlusMinus(event)">
+              <img
+                src="./Images/Navbar/Mobile/plus_icon.svg"
+                alt=""
+                class="plus_icon"
               />
-              <label for="discount2" class="checkPrice"> More than 25%</label
-              ><br />
-            </div>
+            </span>
           </div>
         </div>
       </div>
+    </section>
 
-      <section>
-        <div id="heading-filter">
-          <h1>2309032-vegetables (77)</h1>
-          <select name="Popularity" id="filters">
-            <option value="Select">Select</option>
-            <option value="low-to-high">Price - Low to High</option>
-            <option value="high-to-low">Price - High to Low</option>
-            <option value="Alphabetical">Alphabetical</option>
-          </select>
-        </div>
-        <div id="All-Products">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/726/726455.png"
-            alt=""
-            width="4%"
-          />
-          <a href="">All Products</a>
-        </div>
-        <!-- <hr style="width: 57%; margin-left: 30%" /> -->
-        <div id="Vegitables"></div>
-      </section>
-    </div>
-
-    <hr style="margin-top: 4rem" />
-    <footer>
-      <section id="Links">
-        <div id="bigbasket">
-          <p>bigbasket</p>
-          <a href="">About Us</a>
-          <a href="">In News</a>
-          <a href="">Green bigbasket</a>
-          <a href="">Privacy Policy</a>
-          <a href="">Affiliate</a>
-          <a href="">Terms and Conditions</a>
-          <a href="">Careers At bigbasket</a>
-          <a href="">bb Instant</a>
-          <a href="">bb Daily</a>
-          <a href="">bb Blog</a>
-          <a href="">bbnow</a>
-        </div>
-
-        <div id="help">
-          <p>Help</p>
-          <a href="">FAQs</a>
-          <a href="">Contact Us</a>
-          <a href="">bb Wallet FAQs</a>
-          <a href="">bb Wallet T&Cs</a>
-          <a href="">Vendor Connect</a>
-        </div>
-
-        <div id="download">
-          <p>Download Our App</p>
-          <div id="App-Stores">
-            <a href="">
-              <img
-                src="/Images/DownloadApp/Google-App-store-icon.webp"
-                alt="Google-App"
+    <section id="cover-section"></section>
+    <!-- NavBar Section: End -->
+    <!-- Navbar Code End --------------------------------------------------- -->
+    <div id="Container-Vegetable">
+      <div id="Main-box">
+        <div id="temp">
+          <div id="stick">
+            <h4>
+              <span class="Categories">Categories</span>
+              <hr />
+            </h4>
+            <h4>
+              <span class="Categories">Brand</span>
+              <hr />
+            </h4>
+            <form action="">
+              <input
+                type="text"
+                id="search-bar"
+                placeholder="Search by Brand"
               />
-            </a>
-            <a href="">
-              <img
-                src="/Images/DownloadApp/Apple-App-store-icon.png"
-                alt="Apple-App"
-              />
-            </a>
+              <button id="Search-icon" type="submit">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png"
+                  alt=""
+                />
+              </button>
+            </form>
+            <!-- -----------------------------Price checkbox part---------------------------------- -->
+            <h4>
+              <span class="Categories">Price</span>
+              <hr />
+            </h4>
+            <div class="check-box-container">
+              <div>
+                <input
+                  type="checkbox"
+                  id="price1"
+                  name="price1"
+                  value="less-20"
+                />
+                <label for="price1" class="checkPrice"> Less than Rs 20</label
+                ><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="price2"
+                  name="price2"
+                  value="price-20-50"
+                />
+                <label for="price1" class="checkPrice"> Rs 21 to Rs 50</label
+                ><br />
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="price3"
+                  name="price3"
+                  value="price-51-100"
+                />
+                <label for="price1" class="checkPrice"> Rs 51 to Rs100</label
+                ><br />
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="price4"
+                  name="price4"
+                  value="price-101-200"
+                />
+                <label for="price1" class="checkPrice"> Rs 101 to Rs 200</label
+                ><br />
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="price5"
+                  name="price5"
+                  value="price-201-500"
+                />
+                <label for="price1" class="checkPrice"> Rs 201 to Rs 500</label
+                ><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="price6"
+                  name="price6"
+                  value="more-501"
+                />
+                <label for="price1" class="checkPrice"> More than Rs 501</label
+                ><br />
+              </div>
+            </div>
+            <!-- --------------------------Discount Part------------------------------ -->
+            <h4>
+              <span class="Categories">Discount</span>
+              <hr />
+            </h4>
+            <div class="check-box-container">
+              <div>
+                <input
+                  type="checkbox"
+                  id="discount1"
+                  name="discount1"
+                  value="Discount"
+                />
+                <label for="discount1" class="checkPrice"> 15% - 25%</label
+                ><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="discount2"
+                  name="discount2"
+                  value="Discount"
+                />
+                <label for="discount2" class="checkPrice"> More than 25%</label
+                ><br />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div id="Social-media">
-          <p>Get Social With Us</p>
-          <span id="icon">
-            <a href="">
-              <img
-                src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png"
-                alt="FaceBook"
-              />
-            </a>
+        <section>
+          <div id="heading-filter">
+            <h1>2309032-vegetables (77)</h1>
+            <select name="Popularity" id="filters">
+              <option value="Select">Select</option>
+              <option value="low-to-high">Price - Low to High</option>
+              <option value="high-to-low">Price - High to Low</option>
+              <option value="Alphabetical">Alphabetical</option>
+            </select>
+          </div>
+          <div id="All-Products">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/726/726455.png"
+              alt=""
+              width="4%"
+            />
+            <a href="">All Products</a>
+          </div>
+          <!-- <hr style="width: 57%; margin-left: 30%" /> -->
+          <div id="Vegitables"></div>
+        </section>
+      </div>
 
-            <a href=""
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/174/174863.png"
-                alt="Pinterest"
-            /></a>
+      <hr style="margin-top: 4rem" />
+      <footer>
+        <section id="Links">
+          <div id="bigbasket">
+            <p>bigbasket</p>
+            <a href="">About Us</a>
+            <a href="">In News</a>
+            <a href="">Green bigbasket</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Affiliate</a>
+            <a href="">Terms and Conditions</a>
+            <a href="">Careers At bigbasket</a>
+            <a href="">bb Instant</a>
+            <a href="">bb Daily</a>
+            <a href="">bb Blog</a>
+            <a href="">bbnow</a>
+          </div>
 
-            <a href=""
-              ><img
-                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
-                alt="Twitter"
-            /></a>
-            <a href=""
-              ><img
-                src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png"
-                alt="Instagram"
-            /></a>
-          </span>
-        </div>
-      </section>
+          <div id="help">
+            <p>Help</p>
+            <a href="">FAQs</a>
+            <a href="">Contact Us</a>
+            <a href="">bb Wallet FAQs</a>
+            <a href="">bb Wallet T&Cs</a>
+            <a href="">Vendor Connect</a>
+          </div>
 
-      <hr />
+          <div id="download">
+            <p>Download Our App</p>
+            <div id="App-Stores">
+              <a href="">
+                <img
+                  src="/Images/DownloadApp/Google-App-store-icon.webp"
+                  alt="Google-App"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="/Images/DownloadApp/Apple-App-store-icon.png"
+                  alt="Apple-App"
+                />
+              </a>
+            </div>
+          </div>
 
-      <section id="about-footer">
-        <p>POPULAR CATEGORIES:</p>
-        <div id="popular_category">
-          <a href="">Sunflower</a>
-          <a href="">Wheat Atta</a>
-          <a href="">Ghee</a>
-          <a href="">Milk</a>
-          <a href="">Health Drinks</a>
-          <a href="">Flakes</a>
-          <a href="">Organic F&V</a>
-          <a href="">Namkeen</a>
-          <a href="">Eggs</a>
-          <a href="">Floor Cleaners</a>
-          <a href="">Other Juices</a>
-          <a href="">Leafy Vegetables</a>
-          <a href="">Frozen Veg Food</a>
-          <a href="">Diapers & Wipes</a>
-        </div>
-        <p>POPULAR BRANDS</p>
-        <div id="popular_brands">
-          <a href="">Amul</a>
-          <a href="">Nescafe</a>
-          <a href="">MTR</a>
-          <a href="">RED BULL</a>
-          <a href="">elite cake</a>
-          <a href="">Pediasure</a>
-          <a href="">Yummiez</a>
-          <a href="">Yera</a>
-          <a href="">Yakult</a>
-          <a href="">Britannia</a>
-          <a href="">Wow Momo</a>
-          <a href="">Fortune</a>
-          <a href="">Haldirams</a>
-          <a href="">Ferrero</a>
-          <a href="">Lays</a>
-          <a href="">Patanjali</a>
-          <a href="">McCain</a>
-          <a href="">Kwality</a>
-        </div>
-        <p>CITIES WE SERVE:</p>
-        <div id="city">
-          <p>
-            Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore, Madurai,
-            Coimbatore, Vijayawada-Guntur, Kolkata, Ahmedabad-Gandhinagar,
-            Nashik Business, Lucknow-Kanpur, Gurgaon, Vadodara, Visakhapatnam,
-            Surat, Nagpur, Patna, Indore, Chandigarh Tricity, Jaipur, Bhopal,
-            Noida-Ghaziabad, Kochi, Krishna District, Bhubaneshwar-Cuttack,
-            Guwahati, Renigunta, Hubli, Davanagere, Trichy, Amravati, Raipur,
-            Rajkot, Gwalior, Bareilly, Allahabad, Hyderabad Rural, Bangalore
-            Rural, Chennai Rural, Vizag Rural, Lucknow Rural, Noida Rural,
-            Ahmedabad Rural, Bhopal Rural, Bhubaneswar Rural, Coimbatore Rural,
-            Chandigarh Rural, Gurugram Rural, Guwahati Rural, Indore Rural,
-            Kochi Rural, Kolkata Rural, Mumbai Rural, Mysore Rural, Nagpur
-            Rural, Patna Rural, Pune Rural, Surat Rural, Vadodara Rural, Jaipur
-            Rural, Ranchi, Nashik, Agra, Kozhikode, Amritsar, Thiruvananthapuram
-          </p>
-        </div>
+          <div id="Social-media">
+            <p>Get Social With Us</p>
+            <span id="icon">
+              <a href="">
+                <img
+                  src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png"
+                  alt="FaceBook"
+                />
+              </a>
 
-        <p>PAYMENT OPTIONS</p>
-        <div id="Payment_options">
-          <img
-            src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg"
-            alt=""
-          />
-          <img
-            src="https://www.freepnglogos.com/uploads/visa-and-mastercard-logo-26.png"
-            alt=""
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/RuPay.svg/2560px-RuPay.svg.png"
-            alt=""
-          />
-          <img
-            src="https://d1oq1nzr46kpxm.cloudfront.net/assets/mobikwik_logo_B-07d7963f9b55a08bb68e24754ce5aaf5240afbef2859e8d4b1e92074b337e62a.png"
-            alt=""
-          />
-        </div>
-      </section>
-    </footer>
+              <a href=""
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174863.png"
+                  alt="Pinterest"
+              /></a>
+
+              <a href=""
+                ><img
+                  src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                  alt="Twitter"
+              /></a>
+              <a href=""
+                ><img
+                  src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png"
+                  alt="Instagram"
+              /></a>
+            </span>
+          </div>
+        </section>
+
+        <hr />
+
+        <section id="about-footer">
+          <p>POPULAR CATEGORIES:</p>
+          <div id="popular_category">
+            <a href="">Sunflower</a>
+            <a href="">Wheat Atta</a>
+            <a href="">Ghee</a>
+            <a href="">Milk</a>
+            <a href="">Health Drinks</a>
+            <a href="">Flakes</a>
+            <a href="">Organic F&V</a>
+            <a href="">Namkeen</a>
+            <a href="">Eggs</a>
+            <a href="">Floor Cleaners</a>
+            <a href="">Other Juices</a>
+            <a href="">Leafy Vegetables</a>
+            <a href="">Frozen Veg Food</a>
+            <a href="">Diapers & Wipes</a>
+          </div>
+          <p>POPULAR BRANDS</p>
+          <div id="popular_brands">
+            <a href="">Amul</a>
+            <a href="">Nescafe</a>
+            <a href="">MTR</a>
+            <a href="">RED BULL</a>
+            <a href="">elite cake</a>
+            <a href="">Pediasure</a>
+            <a href="">Yummiez</a>
+            <a href="">Yera</a>
+            <a href="">Yakult</a>
+            <a href="">Britannia</a>
+            <a href="">Wow Momo</a>
+            <a href="">Fortune</a>
+            <a href="">Haldirams</a>
+            <a href="">Ferrero</a>
+            <a href="">Lays</a>
+            <a href="">Patanjali</a>
+            <a href="">McCain</a>
+            <a href="">Kwality</a>
+          </div>
+          <p>CITIES WE SERVE:</p>
+          <div id="city">
+            <p>
+              Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore,
+              Madurai, Coimbatore, Vijayawada-Guntur, Kolkata,
+              Ahmedabad-Gandhinagar, Nashik Business, Lucknow-Kanpur, Gurgaon,
+              Vadodara, Visakhapatnam, Surat, Nagpur, Patna, Indore, Chandigarh
+              Tricity, Jaipur, Bhopal, Noida-Ghaziabad, Kochi, Krishna District,
+              Bhubaneshwar-Cuttack, Guwahati, Renigunta, Hubli, Davanagere,
+              Trichy, Amravati, Raipur, Rajkot, Gwalior, Bareilly, Allahabad,
+              Hyderabad Rural, Bangalore Rural, Chennai Rural, Vizag Rural,
+              Lucknow Rural, Noida Rural, Ahmedabad Rural, Bhopal Rural,
+              Bhubaneswar Rural, Coimbatore Rural, Chandigarh Rural, Gurugram
+              Rural, Guwahati Rural, Indore Rural, Kochi Rural, Kolkata Rural,
+              Mumbai Rural, Mysore Rural, Nagpur Rural, Patna Rural, Pune Rural,
+              Surat Rural, Vadodara Rural, Jaipur Rural, Ranchi, Nashik, Agra,
+              Kozhikode, Amritsar, Thiruvananthapuram
+            </p>
+          </div>
+
+          <p>PAYMENT OPTIONS</p>
+          <div id="Payment_options">
+            <img
+              src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.freepnglogos.com/uploads/visa-and-mastercard-logo-26.png"
+              alt=""
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/RuPay.svg/2560px-RuPay.svg.png"
+              alt=""
+            />
+            <img
+              src="https://d1oq1nzr46kpxm.cloudfront.net/assets/mobikwik_logo_B-07d7963f9b55a08bb68e24754ce5aaf5240afbef2859e8d4b1e92074b337e62a.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </footer>
+    </div>
     <script src="/JavaScript/Vegitables.js"></script>
+    <script src="/JavaScript/index.js"></script>
+    <script src="./JavaScript/enums.js"></script>
+    <script src="./JavaScript/loginSignup.js"></script>
+    <script src="./JavaScript/nav.js"></script>
   </body>
 </html>
