@@ -29,6 +29,70 @@ function updateUsers() {
 
 updateUsers();
 
+if (window.location.pathname.includes("signup.html")) {
+    if (currentLoggedInUser && currentLoggedInUser.loggedIn) {
+        alert("You are already logged in");
+        window.location.assign("index.html");
+    }
+}
+
+function hideNonLoggedInDesktopNav() {
+    if (window.innerWidth >= 992) {
+        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        desktopNavLoggedIn.style.display = "flex";
+        let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
+        desktopNavNotLoggedIn.style.display = "none";
+    } else {
+        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        desktopNavLoggedIn.style.display = "none";
+        let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
+        desktopNavNotLoggedIn.style.display = "none";
+    }
+}
+
+function showNonLoggedInDesktopNav() {
+    if (window.innerWidth >= 992) {
+        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        desktopNavLoggedIn.style.display = "none";
+        let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
+        desktopNavNotLoggedIn.style.display = "flex";
+    } else {
+        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        desktopNavLoggedIn.style.display = "none";
+        let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
+        desktopNavNotLoggedIn.style.display = "none";
+    }
+}
+
+function showAppropriateNavbar() {
+    if (currentLoggedInUser && currentLoggedInUser.loggedIn) {
+        hideNonLoggedInDesktopNav();
+    } else {
+        showNonLoggedInDesktopNav();
+    }
+}
+
+showAppropriateNavbar();
+
+window.addEventListener("resize", function (event) {
+    showAppropriateNavbar();
+});
+
+function openLoginModal(event) {
+    event.preventDefault();
+    let loginModal = document.querySelector("#sign-up-login.index-page");
+    loginModal.style.animationDuration = "0.3s";
+    loginModal.style.animationName = "slidedown";
+    loginModal.style.top = "113px";
+}
+
+function closeLoginModal() {
+    let loginModal = document.querySelector("#sign-up-login.index-page");
+    loginModal.style.animationDuration = "0.3s";
+    loginModal.style.animationName = "slideup";
+    loginModal.style.top = "-1000px";
+}
+
 function getNewOtp() {
     let validString = "0123456789";
     let otp = "";
@@ -42,18 +106,18 @@ function getNewOtp() {
 }
 
 function getNewUser(mobile, email) {
-    if (mobile){
+    if (mobile) {
         updateUsers();
-        let existingUser = registeredUsers.filter((g)=>g.mobile === mobile);
+        let existingUser = registeredUsers.filter((g) => g.mobile === mobile);
         if (existingUser.length > 0) {
             let u = existingUser[0];
             u.otp = getNewOtp();
             return u;
         }
     }
-    if (email){
+    if (email) {
         updateUsers();
-        let existingUser = registeredUsers.filter((g)=>f.email === email);
+        let existingUser = registeredUsers.filter((g) => g.email === email);
         if (existingUser.length > 0) {
             let u = existingUser[0];
             u.otp = getNewOtp();
@@ -86,7 +150,7 @@ function getLoginMethod() {
     return localStorage.getItem(allEnums.loginMethod);
 }
 
-function setRegisteredUsers(){
+function setRegisteredUsers() {
     localStorage.setItem(allEnums.registeredUsers, JSON.stringify(registeredUsers));
 }
 
@@ -102,6 +166,17 @@ function showLoginSignupView() {
     let loginSignUpView = document.getElementById("login-signup-view-container");
     otpView.style.display = "none";
     loginSignUpView.style.display = "block";
+}
+
+function pushToRegisteredUsers(user){
+    let ind = -100;
+    let f = registeredUsers.filter((u, i) => {if(u.mobileNumber === user.mobileNumber || u.email === user.email) {ind = i; return true;} return false;});
+    console.log({f})
+    if (f.length > 0 && ind !== -100){
+        registeredUsers[ind] = user;
+    } else {
+        registeredUsers.push(user);
+    }
 }
 
 function signUp() {
@@ -120,39 +195,48 @@ function signUp() {
         return;
     }
     updateUsers();
-    registeredUsers.push(user);
+    pushToRegisteredUsers(user);
     setRegisteredUsers();
     setCurrentUser(user);
-    console.log({user});
+    console.log({ user });
     showOtpView();
 
     let currentUserNumber = document.getElementById("current-user-number");
-    currentLoggedInUser.innerText = user.mobile;
+    let checkOtpText = document.getElementById("check-otp-text");
+    if (user.mobileNumber) {
+        currentUserNumber.innerText = user.mobileNumber;
+        checkOtpText.innerText = "Please check the OTP sent on Your Mobile Number";
+    } else if (user.email){
+        currentUserNumber.innerText = user.email;
+        checkOtpText.innerText = "Please check the OTP sent on Your Email";
+    }
 }
 
 function logIn() {
     let currUser = getCurrentUser();
 
-    if (!currUser){
+    if (!currUser) {
         alert("Please enter signup first");
         return;
     }
 
     let otpInput = document.getElementById("otp-input");
 
-    if (currUser.otp === otpInput.value){
+    if (currUser.otp === otpInput.value) {
         updateUsers();
         let lm = localStorage.getItem(allEnums.loginMethod);
         let found = false;
         let nRUs = registeredUsers.map(u => {
-            if (u["lm"] === currUser["lm"]){
+            if (u["lm"] === currUser["lm"]) {
                 u.loggedIn = true;
                 setCurrentUser(u);
                 found = true;
             }
         });
-        if (found){
+        if (found) {
             alert("Your are now logged in.");
+            hideNonLoggedInDesktopNav();
+            closeLoginModal();
         }
         setRegisteredUsers(nRUs);
     } else {
@@ -178,7 +262,7 @@ function validateMobileNumberInput(e) {
 function validateOtp(e) {
     let input = e.target.value;
     input = input.replace(/\D/g, "");
-    if (input.length > 6){
+    if (input.length > 6) {
         input = input.slice(0, 6)
     }
     e.target.value = input;

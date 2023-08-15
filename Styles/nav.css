@@ -3,6 +3,7 @@
   --navbar-mobile-top-height: 40px;
   --signup-login-modal-input-height: 510px;
   --signup-login-modal-input-width: 355px;
+  --sign-up-login-modal-top: 113px;
 }
 
 :disabled {
@@ -202,6 +203,27 @@ body {
   }
 }
 
+
+@keyframes slidedown {
+  from {
+    top: -1000px;
+  }
+
+  to {
+    top: var(--sign-up-login-modal-top);
+  }
+}
+
+@keyframes slideup {
+  from {
+    top: var(--sign-up-login-modal-top);
+  }
+
+  to {
+    top: -1000px;
+  }
+}
+
 @keyframes slideout {
   from {
     left: 0px;
@@ -222,7 +244,7 @@ body {
   align-items: center;
   position: absolute;
   width: 100%;
-  top: 113px;
+  top: var(--sign-up-login-modal-top);
 }
 
 #sign-up-login > div:first-child {
@@ -477,6 +499,17 @@ p.signup-modal-side-text {
   white-space: nowrap;
 }
 
+#sign-up-login.index-page{
+  top: -1000px;
+}
+
+#desktop-nav {
+  display: none;
+}
+#desktop-nav-not-logged-in {
+  display: none;
+}
+
 @media (min-width: 992px) {
   #mobile-nav {
     display: none;
@@ -489,15 +522,25 @@ p.signup-modal-side-text {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
     min-width: 100vw;
   }
+  #desktop-nav-not-logged-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #desktop-nav-not-logged-in .container{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+
+  }
   #sidebar-mobile {
     display: none;
   }
   .only-mobile {
     display: none;
   }
-}
-
-@media (min-width: 992px) {
   .container {
     width: 768px;
     padding-right: 2.75rem;

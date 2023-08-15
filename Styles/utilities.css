@@ -6,6 +6,10 @@
   font-size: 12px;
 }
 
+.fs-13 {
+  font-size: 13px;
+}
+
 .fs-14 {
   font-size: 14px;
 }
@@ -184,4 +188,15 @@
 
 .mw-8{
   max-width: 8rem;
+}
+
+.hover-green:hover{
+  color: #84c225;
+}
+
+.fully-centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }

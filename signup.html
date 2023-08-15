@@ -9,9 +9,6 @@
 
 <body>
     <!-- NavBar Section: Start -->
-    <nav id="desktop-nav-not-logged-in">
-        
-    </nav>
     <nav id="desktop-nav">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center w-100 g-10 my-8">
@@ -298,7 +295,7 @@
 
     <img class="only-mobile" src="./Images/1904223_gourmet-snacks_460_1st.webp" width="100%" alt="">
     <!-- SignupLogin Modal Start -->
-    <div id="sign-up-login">
+    <div id="sign-up-login" class="signup-page">
         <div>
             <div id="login-signup-view-container">
                 <div id="login-signup">
@@ -318,7 +315,7 @@
                         <button onclick="signUp()" class="cursor-pointer" id="continue-button" disabled>
                             Continue
                         </button>
-                        <p>
+                        <p class="fs-10">
                             By continuing, I accept TCP-bigbasket’s
                             <a href="/terms-and-conditions/" target="_blank">
                                 Terms and Conditions
@@ -343,10 +340,10 @@
                             </svg>
                             <h3>Verify Mobile Number</h3>
                         </div>
-                        <p class="color-979797 text-center fs-14">Please check the OTP sent to your mobile number</p>
+                        <p id="check-otp-text" class="color-979797 text-center fs-14">Please check the OTP sent to your mobile number</p>
                         <div class="d-flex justify-content-center align-items-center g-10">
                             <p id="current-user-number" class="color-333 text-center">9049963060</p>
-                            <button id="change-number-button" class="btn-outline-small fs-12">change</button>
+                            <button id="change-number-button" class="btn-outline-small fs-12 cursor-pointer" onclick="showLoginSignupView()">change</button>
                         </div>
 
                         <div class="d-flex flex-column justify-content-center align-items-center mt-30 g-10">
