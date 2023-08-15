@@ -3,19 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CArt</title>
-    <link rel="stylesheet" href="/Styles/vegetables.css" />
-    <link rel="stylesheet" href="/Styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Styles/cart.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div>
-      <h4 id="totalAmount">Total Amount: <span>0</span></h4>
-      <h4 id="totalQuantity">Total Quantity: <span>0</span></h4>
+    <section>
+      <p id="basket-heading">Your Basket( 04 Items)</p>
+      <hr />
 
-      <button id="checkout"><a href="/payment.html">Checkout</a></button>
-    </div>
-
-    <div id="Vegitables"></div>
-    <script src="/JavaScript/cart.js"></script>
+      <div id="item-description">
+        <p>ITEM DESCRIPTION</p>
+        <div class="item-detail">
+          <p>UNIT PRICE</p>
+          <p>QUANTITY</p>
+          <p>SUBTOTAL</p>
+          <p id="savings">SAVINGS</p>
+        </div>
+      </div>
+      <div id="description-total">
+        <span>Fruits & Vegetables</span>
+        <p>02-Items</p>
+        <p>Rs. 75.00</p>
+      </div>
+      <div id="products-detail">
+        
+      </div>
+    </section>
   </body>
 </html>

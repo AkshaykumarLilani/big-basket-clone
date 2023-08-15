@@ -181,102 +181,186 @@ const vegetables = [
   },
 ];
 
-//Catching the element.Vegitables
-var container = document.querySelector("#Vegitables");
-let data = JSON.parse(localStorage.getItem("data")) ?? [];
+//catching the soring part.
+let sorting = document.querySelector("#filters");
+var tempVegi = vegetables;
+sorting.addEventListener("change", function () {
+  let value = this.value;
+  if (value == "Select") {
+    var container = (document.querySelector("#Vegitables").innerHTML = "");
+    console.log(vegetables);
+    display(vegetables);
+  } else if (value == "low-to-high") {
+    tempVegi.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    var container = (document.querySelector("#Vegitables").innerHTML = "");
+    display(tempVegi);
+  } else if (value == "high-to-low") {
+    tempVegi.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    document.querySelector("#Vegitables").innerHTML = "";
+    display(tempVegi);
+  } else if ((value = "Alphabetical")) {
+    tempVegi.sort(function (a, b) {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
 
-let total = JSON.parse(localStorage.getItem("total")) ?? [];
-let totalCost = total[0] || 0;
-let totalQuantity = total[1] || 0;
-vegetables.forEach((element) => {
-  var cards = document.createElement("div");
-
-  cards.className = "cards"; //Give class to the cards element.
-
-  var off = document.createElement("p");
-  off.className = "discount"; //assigining class to discount section.
-
-  var image = document.createElement("img");
-  image.src = element.img;
-  image.classList = "vegitablesImage";
-
-  var name = document.createElement("p");
-  name.className = "VegiName"; //assigning class to name of the vegetable.
-
-  var inputPrice = document.createElement("input");
-  inputPrice.placeholder = `1 Kg - Rs ${element.price}.00`;
-  inputPrice.className = "selectInput";
-
-  var allDetails = document.createElement("div");
-  allDetails.className = "Details"; //Given class to details having deliver , price , quntaty and all.
-  var newContainer = document.createElement("div");
-  //For price.
-  var mrp = document.createElement("span");
-  var previousPrice = document.createElement("span");
-  previousPrice.className = "prevPrice"; //Class to previous price.
-  var currentPrice = document.createElement("span");
-  currentPrice.className = "currPrice";
-
-  //Deleviry :-
-  var deleviry = document.createElement("div");
-
-  deleviry.className = "delivery";
-  var deleviryImg = document.createElement("img");
-  //   deleviryImg.style.width='100%';
-  deleviryImg.src =
-    "https://w7.pngwing.com/pngs/558/519/png-transparent-computer-icons-delivery-symbol-symbol-miscellaneous-angle-text.png";
-  var deleviryCont = document.createElement("span");
-
-  name.innerText = element.name;
-  //Add and quantity buttons :-
-  var quantityContainer = document.createElement("div");
-  var quantity = document.createElement("span");
-
-  var inputQuantity = document.createElement("input");
-  console.log(inputQuantity.value);
-  inputQuantity.className = "InputQuan";
-  inputQuantity.type = "number";
-  var Addbtn = document.createElement("button");
-
-  //Assigning the values
-  off.innerText = `GET ${element.off} OFF`;
-  mrp.innerText = "MRP";
-  previousPrice.innerText = `RS ${element.beforePrice}`;
-  currentPrice.innerText = `Rs ${element.price}`;
-  deleviryCont.innerText = `Standard Delivery : ${element.delivery}`;
-  quantity.innerText = "Qty";
-  inputQuantity.innerText = 1;
-  Addbtn.innerText = "Add 🛒";
-  Addbtn.style.cursor = "pointer";
-
-  //put values in local storage.
-  Addbtn.addEventListener("click", () => {
-    let data = JSON.parse(localStorage.getItem("data")) ?? [];
-    data.push(element);
-    totalCost += element.price;
-    totalQuantity += 1;
-    total[0] = totalCost;
-    total[1] = totalQuantity;
-    localStorage.setItem("total", JSON.stringify(total));
-    localStorage.setItem("data", JSON.stringify(data));
-  });
-
-  //append the values to the containers.
-  quantityContainer.append(quantity, inputQuantity, Addbtn);
-  deleviry.append(deleviryImg, deleviryCont);
-  newContainer.append(mrp, previousPrice, currentPrice);
-  allDetails.append(newContainer, deleviry, quantityContainer);
-  cards.append(
-    off,
-    image,
-    name,
-
-    inputPrice,
-    // newContainer,
-    // deleviry,
-    allDetails
-    // quantityContainer
-  );
-
-  container.appendChild(cards);
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0; //
+    });
+    document.querySelector("#Vegitables").innerHTML = "";
+    display(tempVegi);
+  }
 });
+
+//Functions For Filter.
+let checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkBoxes.forEach((element) => {
+  element.addEventListener("change", function () {
+    if (element.checked) {
+      if (element.value == "less-20") {
+        const lesstwenty = vegetables.filter(function (element) {
+          element.price < 20;
+        });
+        document.querySelector("#Vegitables").innerHTML = "";
+        display(lesstwenty);
+      } else if (element.value == "price-20-50") {
+        const price20to50 = vegetables.filter(function (element) {
+          return element.price >= 20 && element.price <= 50;
+        });
+        document.querySelector("#Vegitables").innerHTML = "";
+        display(price20to50);
+      } else if (element.value == "price-51-100") {
+        const price51to100 = vegetables.filter(function (element) {
+          return element.price >= 51 && element.price <= 100;
+        });
+        document.querySelector("#Vegitables").innerHTML = "";
+        display(price51to100);
+      } else if (element.value == "price-101-200") {
+        const price101to200 = vegetables.filter(function (element) {
+          return element.price >= 101 && element.price <= 200;
+        });
+        document.querySelector("#Vegitables").innerHTML = "";
+        if (price101to200.length > 0) {
+          display(price101to200);
+        }
+      }
+    } else {
+      document.querySelector("#Vegitables").innerHTML = "";
+      display(vegetables);
+    }
+  });
+});
+console.log(checkBoxes);
+
+display(vegetables);
+
+function display(array) {
+  //Catching the element.Vegitables
+  var container = document.querySelector("#Vegitables");
+  let data = JSON.parse(localStorage.getItem("data")) ?? [];
+
+  let total = JSON.parse(localStorage.getItem("total")) ?? [];
+  let totalCost = total[0] || 0;
+  let totalQuantity = total[1] || 0;
+  array.forEach((element) => {
+    var cards = document.createElement("div");
+
+    cards.className = "cards"; //Give class to the cards element.
+
+    var off = document.createElement("p");
+    off.className = "discount"; //assigining class to discount section.
+
+    var image = document.createElement("img");
+    image.src = element.img;
+    image.classList = "vegitablesImage";
+
+    var name = document.createElement("p");
+    name.className = "VegiName"; //assigning class to name of the vegetable.
+
+    var inputPrice = document.createElement("input");
+    inputPrice.placeholder = `1 Kg - Rs ${element.price}.00`;
+    inputPrice.className = "selectInput";
+
+    var allDetails = document.createElement("div");
+    allDetails.className = "Details"; //Given class to details having deliver , price , quntaty and all.
+    var newContainer = document.createElement("div");
+    //For price.
+    var mrp = document.createElement("span");
+    var previousPrice = document.createElement("span");
+    previousPrice.className = "prevPrice"; //Class to previous price.
+    var currentPrice = document.createElement("span");
+    currentPrice.className = "currPrice";
+
+    //Deleviry :-
+    var deleviry = document.createElement("div");
+
+    deleviry.className = "delivery";
+    var deleviryImg = document.createElement("img");
+    //   deleviryImg.style.width='100%';
+    deleviryImg.src =
+      "https://w7.pngwing.com/pngs/558/519/png-transparent-computer-icons-delivery-symbol-symbol-miscellaneous-angle-text.png";
+    var deleviryCont = document.createElement("span");
+
+    name.innerText = element.name;
+    //Add and quantity buttons :-
+    var quantityContainer = document.createElement("div");
+    var quantity = document.createElement("span");
+
+    var inputQuantity = document.createElement("input");
+    console.log(inputQuantity.value);
+    inputQuantity.className = "InputQuan";
+    inputQuantity.type = "number";
+    var Addbtn = document.createElement("button");
+
+    //Assigning the values
+    off.innerText = `GET ${element.off} OFF`;
+    mrp.innerText = "MRP";
+    previousPrice.innerText = `RS ${element.beforePrice}`;
+    currentPrice.innerText = `Rs ${element.price}`;
+    deleviryCont.innerText = `Standard Delivery : ${element.delivery}`;
+    quantity.innerText = "Qty";
+    inputQuantity.innerText = 1;
+    Addbtn.innerText = "Add 🛒";
+    Addbtn.style.cursor = "pointer";
+
+    //put values in local storage.
+    Addbtn.addEventListener("click", () => {
+      let data = JSON.parse(localStorage.getItem("data")) ?? [];
+      data.push(element);
+      totalCost += element.price;
+      totalQuantity += 1;
+      total[0] = totalCost;
+      total[1] = totalQuantity;
+      localStorage.setItem("total", JSON.stringify(total));
+      localStorage.setItem("data", JSON.stringify(data));
+    });
+
+    //append the values to the containers.
+    quantityContainer.append(quantity, inputQuantity, Addbtn);
+    deleviry.append(deleviryImg, deleviryCont);
+    newContainer.append(mrp, previousPrice, currentPrice);
+    allDetails.append(newContainer, deleviry, quantityContainer);
+    cards.append(
+      off,
+      image,
+      name,
+
+      inputPrice,
+      // newContainer,
+      // deleviry,
+      allDetails
+      // quantityContainer
+    );
+
+    container.appendChild(cards);
+  });
+}

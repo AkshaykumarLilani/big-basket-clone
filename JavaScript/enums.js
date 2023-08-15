@@ -1,4 +1,8 @@
 var allEnums = {
     registeredUsers: "registeredUsers",
-    currentLoggedInUser: "currentLoggedInUser"
+    currentLoggedInUser: "currentLoggedInUser",
+    vegetablesData:"data",
+    cartTotal:"total",
 }
+
+

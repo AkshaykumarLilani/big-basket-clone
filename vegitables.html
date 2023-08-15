@@ -7,10 +7,154 @@
     <link rel="stylesheet" href="/Styles/vegetables.css" />
     <link rel="stylesheet" href="/Styles/Footer.css" />
     <link rel="stylesheet" href="/Styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
-    <div id="Vegitables"></div>
+    <div id="Main-box">
+      <div id="temp">
+        <div id="stick">
+          <h4>
+            <span class="Categories">Categories</span>
+            <hr />
+          </h4>
+          <h4>
+            <span class="Categories">Brand</span>
+            <hr />
+          </h4>
+          <form action="">
+            <input type="text" id="search-bar" placeholder="Search by Brand" />
+            <button id="Search-icon" type="submit">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png"
+                alt=""
+              />
+            </button>
+          </form>
+          <!-- -----------------------------Price checkbox part---------------------------------- -->
+          <h4>
+            <span class="Categories">Price</span>
+            <hr />
+          </h4>
+          <div class="check-box-container">
+            <div>
+              <input
+                type="checkbox"
+                id="price1"
+                name="price1"
+                value="less-20"
+              />
+              <label for="price1" class="checkPrice"> Less than Rs 20</label
+              ><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="price2"
+                name="price2"
+                value="price-20-50"
+              />
+              <label for="price1" class="checkPrice"> Rs 21 to Rs 50</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price3"
+                name="price3"
+                value="price-51-100"
+              />
+              <label for="price1" class="checkPrice"> Rs 51 to Rs100</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price4"
+                name="price4"
+                value="price-101-200"
+              />
+              <label for="price1" class="checkPrice"> Rs 101 to Rs 200</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price5"
+                name="price5"
+                value="price-201-500"
+              />
+              <label for="price1" class="checkPrice"> Rs 201 to Rs 500</label
+              ><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="price6"
+                name="price6"
+                value="more-501"
+              />
+              <label for="price1" class="checkPrice"> More than Rs 501</label
+              ><br />
+            </div>
+          </div>
+          <!-- --------------------------Discount Part------------------------------ -->
+          <h4>
+            <span class="Categories">Discount</span>
+            <hr />
+          </h4>
+          <div class="check-box-container">
+            <div>
+              <input
+                type="checkbox"
+                id="discount1"
+                name="discount1"
+                value="Discount"
+              />
+              <label for="discount1" class="checkPrice"> 15% - 25%</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="discount2"
+                name="discount2"
+                value="Discount"
+              />
+              <label for="discount2" class="checkPrice"> More than 25%</label
+              ><br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div id="heading-filter">
+          <h1>2309032-vegetables (77)</h1>
+          <select name="Popularity" id="filters">
+            <option value="Select">Select</option>
+            <option value="low-to-high">Price - Low to High</option>
+            <option value="high-to-low">Price - High to Low</option>
+            <option value="Alphabetical">Alphabetical</option>
+          </select>
+        </div>
+        <div id="All-Products">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/726/726455.png"
+            alt=""
+            width="4%"
+          />
+          <a href="">All Products</a>
+        </div>
+        <!-- <hr style="width: 57%; margin-left: 30%" /> -->
+        <div id="Vegitables"></div>
+      </section>
+    </div>
+
     <hr style="margin-top: 4rem" />
     <footer>
       <section id="Links">
