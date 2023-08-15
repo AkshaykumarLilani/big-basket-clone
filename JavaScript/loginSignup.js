@@ -177,6 +177,8 @@ function pushToRegisteredUsers(user){
     } else {
         registeredUsers.push(user);
     }
+
+    alert(`Your OTP is: ${user.otp}. It is also printed on Console as a user object`);
 }
 
 function signUp() {
@@ -242,6 +244,10 @@ function logIn() {
     } else {
         alert("Incorrect OTP");
     }
+}
+
+function Logout() {
+    
 }
 
 function validateMobileNumberInput(e) {
