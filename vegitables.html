@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegitables</title>
+    <link rel="stylesheet" href="/Styles/vegetables.css" />
+    <link rel="stylesheet" href="/Styles/Footer.css" />
+    <link rel="stylesheet" href="/Styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="Main-box">
+      <div id="temp">
+        <div id="stick">
+          <h4>
+            <span class="Categories">Categories</span>
+            <hr />
+          </h4>
+          <h4>
+            <span class="Categories">Brand</span>
+            <hr />
+          </h4>
+          <form action="">
+            <input type="text" id="search-bar" placeholder="Search by Brand" />
+            <button id="Search-icon" type="submit">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3031/3031293.png"
+                alt=""
+              />
+            </button>
+          </form>
+          <!-- -----------------------------Price checkbox part---------------------------------- -->
+          <h4>
+            <span class="Categories">Price</span>
+            <hr />
+          </h4>
+          <div class="check-box-container">
+            <div>
+              <input
+                type="checkbox"
+                id="price1"
+                name="price1"
+                value="less-20"
+              />
+              <label for="price1" class="checkPrice"> Less than Rs 20</label
+              ><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="price2"
+                name="price2"
+                value="price-20-50"
+              />
+              <label for="price1" class="checkPrice"> Rs 21 to Rs 50</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price3"
+                name="price3"
+                value="price-51-100"
+              />
+              <label for="price1" class="checkPrice"> Rs 51 to Rs100</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price4"
+                name="price4"
+                value="price-101-200"
+              />
+              <label for="price1" class="checkPrice"> Rs 101 to Rs 200</label
+              ><br />
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="price5"
+                name="price5"
+                value="price-201-500"
+              />
+              <label for="price1" class="checkPrice"> Rs 201 to Rs 500</label
+              ><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="price6"
+                name="price6"
+                value="more-501"
+              />
+              <label for="price1" class="checkPrice"> More than Rs 501</label
+              ><br />
+            </div>
+          </div>
+          <!-- --------------------------Discount Part------------------------------ -->
+          <h4>
+            <span class="Categories">Discount</span>
+            <hr />
+          </h4>
+          <div class="check-box-container">
+            <div>
+              <input
+                type="checkbox"
+                id="discount1"
+                name="discount1"
+                value="Discount"
+              />
+              <label for="discount1" class="checkPrice"> 15% - 25%</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="discount2"
+                name="discount2"
+                value="Discount"
+              />
+              <label for="discount2" class="checkPrice"> More than 25%</label
+              ><br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div id="heading-filter">
+          <h1>2309032-vegetables (77)</h1>
+          <select name="Popularity" id="filters">
+            <option value="Select">Select</option>
+            <option value="low-to-high">Price - Low to High</option>
+            <option value="high-to-low">Price - High to Low</option>
+            <option value="Alphabetical">Alphabetical</option>
+          </select>
+        </div>
+        <div id="All-Products">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/726/726455.png"
+            alt=""
+            width="4%"
+          />
+          <a href="">All Products</a>
+        </div>
+        <!-- <hr style="width: 57%; margin-left: 30%" /> -->
+        <div id="Vegitables"></div>
+      </section>
+    </div>
+
+    <hr style="margin-top: 4rem" />
+    <footer>
+      <section id="Links">
+        <div id="bigbasket">
+          <p>bigbasket</p>
+          <a href="">About Us</a>
+          <a href="">In News</a>
+          <a href="">Green bigbasket</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Affiliate</a>
+          <a href="">Terms and Conditions</a>
+          <a href="">Careers At bigbasket</a>
+          <a href="">bb Instant</a>
+          <a href="">bb Daily</a>
+          <a href="">bb Blog</a>
+          <a href="">bbnow</a>
+        </div>
+
+        <div id="help">
+          <p>Help</p>
+          <a href="">FAQs</a>
+          <a href="">Contact Us</a>
+          <a href="">bb Wallet FAQs</a>
+          <a href="">bb Wallet T&Cs</a>
+          <a href="">Vendor Connect</a>
+        </div>
+
+        <div id="download">
+          <p>Download Our App</p>
+          <div id="App-Stores">
+            <a href="">
+              <img
+                src="/Images/DownloadApp/Google-App-store-icon.webp"
+                alt="Google-App"
+              />
+            </a>
+            <a href="">
+              <img
+                src="/Images/DownloadApp/Apple-App-store-icon.png"
+                alt="Apple-App"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div id="Social-media">
+          <p>Get Social With Us</p>
+          <span id="icon">
+            <a href="">
+              <img
+                src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png"
+                alt="FaceBook"
+              />
+            </a>
+
+            <a href=""
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174863.png"
+                alt="Pinterest"
+            /></a>
+
+            <a href=""
+              ><img
+                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                alt="Twitter"
+            /></a>
+            <a href=""
+              ><img
+                src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png"
+                alt="Instagram"
+            /></a>
+          </span>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="about-footer">
+        <p>POPULAR CATEGORIES:</p>
+        <div id="popular_category">
+          <a href="">Sunflower</a>
+          <a href="">Wheat Atta</a>
+          <a href="">Ghee</a>
+          <a href="">Milk</a>
+          <a href="">Health Drinks</a>
+          <a href="">Flakes</a>
+          <a href="">Organic F&V</a>
+          <a href="">Namkeen</a>
+          <a href="">Eggs</a>
+          <a href="">Floor Cleaners</a>
+          <a href="">Other Juices</a>
+          <a href="">Leafy Vegetables</a>
+          <a href="">Frozen Veg Food</a>
+          <a href="">Diapers & Wipes</a>
+        </div>
+        <p>POPULAR BRANDS</p>
+        <div id="popular_brands">
+          <a href="">Amul</a>
+          <a href="">Nescafe</a>
+          <a href="">MTR</a>
+          <a href="">RED BULL</a>
+          <a href="">elite cake</a>
+          <a href="">Pediasure</a>
+          <a href="">Yummiez</a>
+          <a href="">Yera</a>
+          <a href="">Yakult</a>
+          <a href="">Britannia</a>
+          <a href="">Wow Momo</a>
+          <a href="">Fortune</a>
+          <a href="">Haldirams</a>
+          <a href="">Ferrero</a>
+          <a href="">Lays</a>
+          <a href="">Patanjali</a>
+          <a href="">McCain</a>
+          <a href="">Kwality</a>
+        </div>
+        <p>CITIES WE SERVE:</p>
+        <div id="city">
+          <p>
+            Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore, Madurai,
+            Coimbatore, Vijayawada-Guntur, Kolkata, Ahmedabad-Gandhinagar,
+            Nashik Business, Lucknow-Kanpur, Gurgaon, Vadodara, Visakhapatnam,
+            Surat, Nagpur, Patna, Indore, Chandigarh Tricity, Jaipur, Bhopal,
+            Noida-Ghaziabad, Kochi, Krishna District, Bhubaneshwar-Cuttack,
+            Guwahati, Renigunta, Hubli, Davanagere, Trichy, Amravati, Raipur,
+            Rajkot, Gwalior, Bareilly, Allahabad, Hyderabad Rural, Bangalore
+            Rural, Chennai Rural, Vizag Rural, Lucknow Rural, Noida Rural,
+            Ahmedabad Rural, Bhopal Rural, Bhubaneswar Rural, Coimbatore Rural,
+            Chandigarh Rural, Gurugram Rural, Guwahati Rural, Indore Rural,
+            Kochi Rural, Kolkata Rural, Mumbai Rural, Mysore Rural, Nagpur
+            Rural, Patna Rural, Pune Rural, Surat Rural, Vadodara Rural, Jaipur
+            Rural, Ranchi, Nashik, Agra, Kozhikode, Amritsar, Thiruvananthapuram
+          </p>
+        </div>
+
+        <p>PAYMENT OPTIONS</p>
+        <div id="Payment_options">
+          <img
+            src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.freepnglogos.com/uploads/visa-and-mastercard-logo-26.png"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/RuPay.svg/2560px-RuPay.svg.png"
+            alt=""
+          />
+          <img
+            src="https://d1oq1nzr46kpxm.cloudfront.net/assets/mobikwik_logo_B-07d7963f9b55a08bb68e24754ce5aaf5240afbef2859e8d4b1e92074b337e62a.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </footer>
+    <script src="/JavaScript/Vegitables.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  width: 1170px;
+  margin: auto;
+}
+.Payment-heading {
+  text-align: center;
+}
+
+#full-form{
+    display: flex;
+    gap: 1rem;
+}
+
+.logo-img {
+  width: 5%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+#Payment-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.tollNumber {
+  display: flex;
+  text-align: center;
+  color: rgba(128, 128, 128, 0.637);
+}
+
+.heading-payment {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+body div > form h4 span {
+  color: red;
+}
+#name-contact,#Address-details,#Street-details,#city-details{
+    display: flex;
+    gap: 1rem;
+}
+#first-name,#lastname,#contact,#houseNumber,#apartment,#street,#landmark,#city,#pincode,#area-det{
+  display: block;
+  margin-top: .5rem;
+  width: 12rem;
+  height: 2rem;
+  /* border-style:none ; */
+}
+#Street-details,#city-details{
+margin-top: 1.5rem;
+}
+#contact{
+    width: 25rem;
+}
+#apartment{
+    width: 38.5rem;
+}
+#street,#landmark{
+    width: 25.3rem;
+}
+
+#area-det{
+    width: 26.5rem;
+}
+
+#form{
+    /* width: 72%; */
+
+    padding: 2rem;
+    background-color: rgba(145, 140, 140, 0.095);
+}
+.submit{
+    padding: .5rem 2rem;
+    margin-top: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.918);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submit-coupon{
+    margin: 0;
+    padding: 0;
+}
+.submit:hover{
+    background-color: rgba(128, 128, 128, 0.69);
+    
+}
+
+#coupon-voucher{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* #Voucher{
+    padding: 2rem rem;
+    width: 25%;
+    background-color: grey;
+} */
+#coupon{
+    height: 2rem;
+}
