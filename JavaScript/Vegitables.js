@@ -259,7 +259,6 @@ checkBoxes.forEach((element) => {
     }
   });
 });
-console.log(checkBoxes);
 
 display(vegetables);
 
