@@ -259,7 +259,6 @@ checkBoxes.forEach((element) => {
     }
   });
 });
-console.log(checkBoxes);
 
 display(vegetables);
 
@@ -320,6 +319,8 @@ function display(array) {
     inputQuantity.className = "InputQuan";
     inputQuantity.type = "number";
     var Addbtn = document.createElement("button");
+    Addbtn.style.padding = "2px";
+    Addbtn.style.margin = "4px";
 
     //Assigning the values
     off.innerText = `GET ${element.off} OFF`;
