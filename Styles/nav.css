@@ -244,6 +244,7 @@ body {
   align-items: center;
   position: absolute;
   width: 100%;
+  z-index: 999999;
   top: var(--sign-up-login-modal-top);
 }
 

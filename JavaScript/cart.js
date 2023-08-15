@@ -155,7 +155,7 @@ function updateCheckoutValueHtml() {
   )}</p>
     <hr />
     <div id="btn-cont">
-    <button id="checkout-btn">Checkout</button>
+    <button id="checkout-btn" onclick="checkoutCart()">Checkout</button>
     </div>
     <p>** Actual delivery charges computed at checkout time</p>
     </div>
@@ -164,9 +164,10 @@ function updateCheckoutValueHtml() {
 }
 updateCheckoutValueHtml();
 //CheckOut Button;
-var checkoutBtn = document.querySelector("#checkout-btn");
-checkoutBtn.addEventListener("click", function () {
-  window.location.assign = "./payment.html";
-});
+
+function checkoutCart() {
+  console.log("Hey");
+  window.location.href = "./payment.html";
+}
 
 display();
