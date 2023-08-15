@@ -7,6 +7,7 @@ This is a [clone](https://visionary-smakager-639150.netlify.app) of [Big Basket]
 | Original Link       | http://www.bigbasket.com/                      |
 | Deployed Clone Link | https://visionary-smakager-639150.netlify.app/ |
 
-
-
 # Authors
+
+1. Divyanshu Rawat (https://github.com/Divyanshu766)
+2. Akshaykumar Lilani (https://github.com/AkshaykumarLilani)
