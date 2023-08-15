@@ -38,12 +38,16 @@ if (window.location.pathname.includes("signup.html")) {
 
 function hideNonLoggedInDesktopNav() {
     if (window.innerWidth >= 992) {
-        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        let desktopNavLoggedIn = document.getElementById("desktop-nav-logged-in");
         desktopNavLoggedIn.style.display = "flex";
         let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
         desktopNavNotLoggedIn.style.display = "none";
+        let desktopNav = document.getElementById("desktop-nav");
+        desktopNav.style.display = "flex";
     } else {
-        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        let desktopNav = document.getElementById("desktop-nav");
+        desktopNav.style.display = "none";
+        let desktopNavLoggedIn = document.getElementById("desktop-nav-logged-in");
         desktopNavLoggedIn.style.display = "none";
         let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
         desktopNavNotLoggedIn.style.display = "none";
@@ -52,21 +56,35 @@ function hideNonLoggedInDesktopNav() {
 
 function showNonLoggedInDesktopNav() {
     if (window.innerWidth >= 992) {
-        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        let desktopNav = document.getElementById("desktop-nav");
+        desktopNav.style.display = "flex";
+        let desktopNavLoggedIn = document.getElementById("desktop-nav-logged-in");
         desktopNavLoggedIn.style.display = "none";
         let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
         desktopNavNotLoggedIn.style.display = "flex";
     } else {
-        let desktopNavLoggedIn = document.getElementById("desktop-nav");
+        let desktopNav = document.getElementById("desktop-nav");
+        desktopNav.style.display = "none";
+        let desktopNavLoggedIn = document.getElementById("desktop-nav-logged-in");
         desktopNavLoggedIn.style.display = "none";
         let desktopNavNotLoggedIn = document.getElementById("desktop-nav-not-logged-in");
         desktopNavNotLoggedIn.style.display = "none";
     }
 }
 
+function showUserNumberInNav() {
+    let loggedInUserNumber = document.getElementsByClassName("loggedInUserNumber");
+    console.log({ loggedInUserNumber });
+    for (let span of loggedInUserNumber) {
+        span.innerText = (currentLoggedInUser.mobileNumber) ? currentLoggedInUser.mobileNumber : currentLoggedInUser.email;
+        span.setAttribute("class", "fs-12");
+    }
+}
+
 function showAppropriateNavbar() {
     if (currentLoggedInUser && currentLoggedInUser.loggedIn) {
         hideNonLoggedInDesktopNav();
+        showUserNumberInNav();
     } else {
         showNonLoggedInDesktopNav();
     }
@@ -168,11 +186,11 @@ function showLoginSignupView() {
     loginSignUpView.style.display = "block";
 }
 
-function pushToRegisteredUsers(user){
+function pushToRegisteredUsers(user) {
     let ind = -100;
-    let f = registeredUsers.filter((u, i) => {if(u.mobileNumber === user.mobileNumber || u.email === user.email) {ind = i; return true;} return false;});
-    console.log({f})
-    if (f.length > 0 && ind !== -100){
+    let f = registeredUsers.filter((u, i) => { if (u.mobileNumber === user.mobileNumber || u.email === user.email) { ind = i; return true; } return false; });
+    console.log({ f })
+    if (f.length > 0 && ind !== -100) {
         registeredUsers[ind] = user;
     } else {
         registeredUsers.push(user);
@@ -208,7 +226,7 @@ function signUp() {
     if (user.mobileNumber) {
         currentUserNumber.innerText = user.mobileNumber;
         checkOtpText.innerText = "Please check the OTP sent on Your Mobile Number";
-    } else if (user.email){
+    } else if (user.email) {
         currentUserNumber.innerText = user.email;
         checkOtpText.innerText = "Please check the OTP sent on Your Email";
     }
@@ -239,6 +257,7 @@ function logIn() {
             alert("Your are now logged in.");
             hideNonLoggedInDesktopNav();
             closeLoginModal();
+            showUserNumberInNav();
         }
         setRegisteredUsers(nRUs);
     } else {
@@ -246,8 +265,15 @@ function logIn() {
     }
 }
 
-function Logout() {
-    
+function logout() {
+    console.log("Logging you out...");
+    updateUsers();
+    if (currentLoggedInUser) {
+        console.log("found user");
+        currentLoggedInUser = {};
+        localStorage.setItem(allEnums.currentLoggedInUser, "{}");
+        window.location.reload();
+    }
 }
 
 function validateMobileNumberInput(e) {
@@ -323,5 +349,8 @@ function switchEmailAndMobileInput() {
     }
 }
 
-document.getElementById("mobile-number-input").addEventListener("input", validateMobileNumberInput);
-document.getElementById("email-input").addEventListener("input", validateEmailAddressInput);
+let mni = document.getElementById("mobile-number-input");
+if (mni) mni.addEventListener("input", validateMobileNumberInput);
+
+let ei = document.getElementById("email-input");
+if (ei) ei.addEventListener("input", validateEmailAddressInput);
