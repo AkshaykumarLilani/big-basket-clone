@@ -59,10 +59,28 @@ gap: 2rem;
    
 }
 
+#fQuan{
+    width: 25%;
+}
+
+.Quan-btn{
+    padding: 0 .2rem;
+    font-weight: bold;
+}
+
+#fQuan{
+    text-align: center;
+}
+
 .item-detail-value{
     display: flex;
     align-items: center;
-    gap: 5.5rem;
+    justify-content: flex-end;
+    gap: 5.1rem;
+}
+
+#Quan-input{
+    width: 10%;
 }
 #product-total>ul>li{
     list-style-type:none;

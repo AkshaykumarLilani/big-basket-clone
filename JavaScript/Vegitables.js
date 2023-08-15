@@ -6,7 +6,7 @@ const vegetables = [
     beforePrice: 100,
     price: 56,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "15%",
@@ -15,7 +15,7 @@ const vegetables = [
     beforePrice: 120,
     price: 89,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "18%",
@@ -24,7 +24,7 @@ const vegetables = [
     beforePrice: 98,
     price: 79,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "22%",
@@ -33,7 +33,7 @@ const vegetables = [
     beforePrice: 130,
     price: 99,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "12%",
@@ -42,7 +42,7 @@ const vegetables = [
     beforePrice: 50,
     price: 29,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "35%",
@@ -51,7 +51,7 @@ const vegetables = [
     beforePrice: 103,
     price: 79,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "23%",
@@ -60,7 +60,7 @@ const vegetables = [
     beforePrice: 140,
     price: 99,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "24%",
@@ -69,7 +69,7 @@ const vegetables = [
     beforePrice: 107,
     price: 89,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "34%",
@@ -78,7 +78,7 @@ const vegetables = [
     beforePrice: 48,
     price: 29,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "22%",
@@ -87,7 +87,7 @@ const vegetables = [
     beforePrice: 78,
     price: 49,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "12%",
@@ -96,7 +96,7 @@ const vegetables = [
     beforePrice: 89,
     price: 69,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "23%",
@@ -105,7 +105,7 @@ const vegetables = [
     beforePrice: 143,
     price: 99,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "45%",
@@ -132,7 +132,7 @@ const vegetables = [
     beforePrice: 104,
     price: 79,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "26%",
@@ -141,7 +141,7 @@ const vegetables = [
     beforePrice: 100,
     price: 79,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "28%",
@@ -150,7 +150,7 @@ const vegetables = [
     beforePrice: 80,
     price: 49,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "20%",
@@ -159,7 +159,7 @@ const vegetables = [
     beforePrice: 97,
     price: 59,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "27%",
@@ -168,7 +168,7 @@ const vegetables = [
     beforePrice: 89,
     price: 29,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
   {
     off: "34%",
@@ -177,7 +177,7 @@ const vegetables = [
     beforePrice: 108,
     price: 89,
     delivery: "Free",
-    quantity: 0,
+    quantity: 1,
   },
 ];
 
