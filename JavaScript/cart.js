@@ -96,7 +96,8 @@ empty.addEventListener("click", function () {
     items.innerHTML = "";
     items.textContent = "Your Cart is Empty !!!";
     empty.textContent = "Shop Now";
-    localStorage.clear();
+    localStorage.removeItem('data');
+    localStorage.removeItem('total');
   } else {
     window.location.href = "./index.html";
   }
