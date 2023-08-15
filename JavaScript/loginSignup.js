@@ -24,7 +24,38 @@ function updateUsers() {
         localStorage.setItem(allEnums.currentLoggedInUser, "{}");
     } else {
         currentLoggedInUser = JSON.parse(localStorage.getItem(allEnums.currentLoggedInUser));
+if (!localStorage.getItem(allEnums.registeredUsers)) {
+  localStorage.setItem(allEnums.registeredUsers, "[]");
+} else {
+  registeredUsers = JSON.parse(localStorage.getItem(allEnums.registeredUsers));
+}
+
+if (!localStorage.getItem(allEnums.currentLoggedInUser)) {
+  localStorage.setItem(allEnums.currentLoggedInUser, "{}");
+} else {
+  registeredUsers = JSON.parse(
+    localStorage.getItem(allEnums.currentLoggedInUser)
+  );
+}
+
+function SignUp() {
+  let mobileNumberInput = document.getElementById("mobile-number-input");
+  let emailInput = document.getElementById("email-input");
+
+  let mobileNumber = mobileNumberInput.value;
+  let email = emailInput.value;
+
+  if (mobileNumber || email) {
+    if (mobileNumber) {
+      if (mobileNumber.length !== 10) {
+        alert("Mobile number should be exactly 10 digits");
+        return;
+      }
+    } else {
     }
+  } else {
+    //won't trigger
+  }
 }
 
 updateUsers();
