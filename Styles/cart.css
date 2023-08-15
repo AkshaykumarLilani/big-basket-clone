@@ -136,6 +136,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   background: linear-gradient(180deg, #fee67c 0, #f2cb76);
+  cursor: pointer;
 }
 
 #btn-cont {

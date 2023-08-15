@@ -135,4 +135,10 @@ let CheckData = `
 `;
 checkOut.innerHTML = CheckData;
 
+//CheckOut Button;
+var checkoutBtn = document.querySelector("#checkout-btn");
+checkoutBtn.addEventListener("click", function () {
+  window.location.href = "./payment.html";
+});
+
 display();
