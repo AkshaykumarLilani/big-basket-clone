@@ -33,6 +33,8 @@ function display() {
     `;
   });
 
+  
+
   //Total Heading
   var heading = document.querySelector("#total-heading");
   let total = JSON.parse(localStorage.getItem("total")) || [];
@@ -111,14 +113,28 @@ function updateTotalCartValue() {
 
 var empty = document.querySelector("#Empty-Basket-Btn");
 
+function shouldUserBeOnThisPage() {
+  let tot = localStorage.getItem("total");
+  let dat = localStorage.getItem("data");
+
+  if (!tot || !dat) {
+    // alert("Please add some products to cart first.");
+    window.location.href = "/";
+  }
+}
+
+shouldUserBeOnThisPage();
+
 empty.addEventListener("click", function () {
   let items = document.querySelector("#products-detail");
   if (empty.innerText === "Empty Basket") {
     items.innerHTML = "";
     items.textContent = "Your Cart is Empty !!!";
     empty.textContent = "Shop Now";
-    localStorage.removeItem('data');
-    localStorage.removeItem('total');
+    localStorage.removeItem("data");
+    localStorage.removeItem("total");
+    alert("Cart was emptied successfully");
+    shouldUserBeOnThisPage();
   } else {
     window.location.href = "./index.html";
   }

@@ -341,6 +341,10 @@ function display(array) {
       totalQuantity += 1;
       total[0] = totalCost;
       total[1] = totalQuantity;
+      let cartItemsSpans = document.getElementsByClassName("cart-items");
+      for (let ci of cartItemsSpans){
+        ci.innerText = totalQuantity;
+      }
       localStorage.setItem("total", JSON.stringify(total));
       localStorage.setItem("data", JSON.stringify(data));
     });
